@@ -78,7 +78,8 @@ export interface AnalyticsConfig {
   };
 }
 
-export interface UIConfig {}
+// biome-ignore lint/complexity/noBannedTypes: <explanation>
+export type UIConfig = {}
 
 const DEFAULT_SITE_NAME = 'Website';
 

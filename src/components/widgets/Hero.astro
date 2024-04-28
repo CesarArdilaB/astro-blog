@@ -7,9 +7,10 @@ export interface Props {
   id?: string;
   title?: string;
   subtitle?: string;
-  tagline?: string;
+  tagline?: string; 
   content?: string;
   actions?: string | CallToAction[];
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   image?: string | any; // TODO: find HTMLElementProps
 }
 
@@ -33,7 +34,7 @@ const {
         {
           tagline && (
             <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
+              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide"
               set:html={tagline}
             />
           )
