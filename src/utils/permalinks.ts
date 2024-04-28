@@ -10,7 +10,7 @@ const createPath = (...params: string[]) => {
     .map((el) => trimSlash(el))
     .filter((el) => !!el)
     .join('/');
-  return '/' + paths + (SITE.trailingSlash && paths ? '/' : '');
+  return `/${paths}${SITE.trailingSlash && paths ? '/' : ''}`;
 };
 
 const BASE_PATHNAME = SITE.base || '/';
