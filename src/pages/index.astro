@@ -1,61 +1,11 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
 
-import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-
-const metadata = {
-  title: 'Cesar Ardila',
-};
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
-  <Fragment slot="header">
-    <Header
-      links={[
-        { text: 'Home', href: '#' },
-        // { text: 'About', href: '#about' },
-        // { text: 'Resume', href: '#resume' },
-        // { text: 'Porfolio', href: '#porfolio' },
-        { text: 'Blog', href: '#blog' },
-      ]}
-      actions={[
-        // {
-        //   text: 'Hire me',
-        //   href: '#',
-        // },
-      ]}
-      isSticky
-      showToggleTheme
-    />
-  </Fragment>
-
-  <!-- Hero2 Widget ******************* -->
-
-  <Hero
-    id="hero"
-    title="Cesar Ardila"
-    tagline="build, ship, observe, iterate, repeat."
-    actions={[
-      // { variant: "primary", text: 'Hire me', href: getPermalink("/contact#form") }
-      ]}
-  >
-    <Fragment slot="subtitle">
-      I'm a Software Engineer passionate about crafting digital products. <br /> With 20+ years of experience, I've worked with various industries, from call and contact centers, construction, and retail to inventory management, crowdfunding, and robotics.
-    </Fragment>
-  </Hero>
-
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Blog"
-    information={``}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+<Layout>
+	<Welcome />
 </Layout>
