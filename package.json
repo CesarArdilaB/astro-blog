@@ -12,7 +12,9 @@
     "check": "biome check ."
   },
   "dependencies": {
-    "astro": "^5.16.4"
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.16.4",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.8"

@@ -9,6 +9,11 @@
     "ignoreUnknown": false,
     "includes": ["**"]
   },
+  "css": {
+    "parser": {
+      "cssModules": true
+    }
+  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
