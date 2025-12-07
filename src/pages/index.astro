@@ -1,5 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import PostCard from '../components/PostCard.astro';
+
+const posts = await getCollection('post');
+const sortedPosts = posts.sort((a, b) => {
+	// Handle cases where publishDate might be undefined, though schema says optional, let's be safe
+	const dateA = a.data.publishDate ? new Date(a.data.publishDate).getTime() : 0;
+	const dateB = b.data.publishDate ? new Date(b.data.publishDate).getTime() : 0;
+	return dateB - dateA;
+});
 ---
 
 <Layout>
@@ -27,7 +37,7 @@ import Layout from '../layouts/Layout.astro';
 				PRODUCT BUILDER.
 			</h1>
 			<p class="font-sans text-xl md:text-2xl text-gray-400 max-w-2xl">
-				Strategic Advisor. <span class="text-brand-accent">20 Years of Shipping.</span>
+				Digital Artisan & Strategist. <span class="text-brand-accent">25 Years of Shipping.</span>
 			</p>
 			
 			<!-- Decorative grid background element -->
@@ -51,40 +61,25 @@ import Layout from '../layouts/Layout.astro';
 				<h3 class="font-mono text-lg tracking-widest">TRANSMISSIONS_LOG</h3>
 			</div>
 
-			<!-- Card 1 -->
-			<a href="#" class="bg-brand-dark p-8 group hover:bg-[#0a0a0a] transition-colors duration-75 relative overflow-hidden h-64 flex flex-col justify-between border-r border-brand-border">
-				<span class="font-mono text-xs text-gray-500">2025.12.06</span>
-				<h4 class="font-mono text-2xl font-bold group-hover:text-brand-accent transition-colors duration-75">The Death of the Nav Bar</h4>
-				<div class="w-full h-1 bg-brand-border group-hover:bg-brand-accent transition-colors duration-75 mt-auto"></div>
-			</a>
-
-			<!-- Card 2 -->
-			<a href="#" class="bg-brand-dark p-8 group hover:bg-[#0a0a0a] transition-colors duration-75 relative overflow-hidden h-64 flex flex-col justify-between border-r border-brand-border">
-				<span class="font-mono text-xs text-gray-500">2025.11.20</span>
-				<h4 class="font-mono text-2xl font-bold group-hover:text-brand-accent transition-colors duration-75">Vercel is the New Heroku</h4>
-				<div class="w-full h-1 bg-brand-border group-hover:bg-brand-accent transition-colors duration-75 mt-auto"></div>
-			</a>
-
-			<!-- Card 3 -->
-			<a href="#" class="bg-brand-dark p-8 group hover:bg-[#0a0a0a] transition-colors duration-75 relative overflow-hidden h-64 flex flex-col justify-between">
-				<span class="font-mono text-xs text-gray-500">2025.10.15</span>
-				<h4 class="font-mono text-2xl font-bold group-hover:text-brand-accent transition-colors duration-75">Minimalism as a Feature</h4>
-				<div class="w-full h-1 bg-brand-border group-hover:bg-brand-accent transition-colors duration-75 mt-auto"></div>
-			</a>
+			{sortedPosts.map((post) => (
+				<PostCard post={post} />
+			))}
+			
+			<!-- Fillers to maintain grid if needed, or leave empty space. For now, just rendering posts. -->
 		</div>
 
 		<!-- Section 4: Footer -->
 		<div class="col-span-1 md:col-span-12 bg-brand-dark p-6 md:p-12 border-t border-brand-border flex flex-col md:flex-row justify-between items-start md:items-center font-mono text-xs md:text-sm text-gray-500 gap-6">
 			<div class="flex flex-col gap-2">
 				<p>System Status: <span class="text-green-500">Online</span></p>
-				<p>Location: Medellín</p>
+				<p>Location: Earth</p>
 				<p>bpm: 128</p>
 			</div>
 			
 			<div class="flex gap-8">
-				<a href="#" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">TWITTER</a>
-				<a href="#" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">GITHUB</a>
-				<a href="#" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">EMAIL</a>
+				<a href="https://twitter.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">TWITTER</a>
+				<a href="https://github.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">GITHUB</a>
+				<a href="mailto:hello@caesar.codes" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">EMAIL</a>
 			</div>
 		</div>
 

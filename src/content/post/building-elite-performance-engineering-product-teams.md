@@ -2,7 +2,7 @@
 publishDate: 2024-04-26T00:00:00Z
 title: "Building Elite-Performance Engineering/Product Teams"
 excerpt: "Explore essential strategies for cultivating elite engineering/product teams: fostering motivation, embracing innovation, and implementing DevOps for seamless performance. Learn how personal development and recognition fuel success."
-image: "~/assets/images/blog/building-elite-performance-engineering-product-teams/cover.jpg"
+image: "../../assets/images/blog/cover.jpg"
 tags:
   - engineering
   - product

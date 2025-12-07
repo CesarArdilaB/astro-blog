@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('post');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+
+interface Props {
+	post: CollectionEntry<'post'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout>
+	<main class="min-h-screen bg-brand-dark border-t border-brand-border">
+		<!-- Article Header -->
+		<header class="border-b border-brand-border p-6 md:p-12">
+			<div class="max-w-4xl mx-auto">
+				<a href="/" class="inline-block mb-8 font-mono text-sm text-gray-500 hover:text-brand-accent transition-colors">
+					<span class="mr-2">←</span> RETURN_TO_BASE
+				</a>
+				
+				<div class="mb-6 flex flex-wrap gap-2 text-sm font-mono font-bold uppercase tracking-tight">
+					<time datetime={post.data.publishDate?.toISOString()} class="bg-brand-accent text-brand-dark px-2 py-0.5">
+						{post.data.publishDate?.toISOString().split('T')[0].replace(/-/g, '.')}
+					</time>
+					
+					{post.data.tags && (
+						<div class="bg-brand-accent text-brand-dark px-2 py-0.5 flex gap-2">
+							<span>///</span>
+							{post.data.tags.map(tag => (
+								<span>#{tag}</span>
+							))}
+						</div>
+					)}
+				</div>
+
+				<h1 class="font-mono text-3xl md:text-5xl font-bold leading-tight mb-8 text-brand-light">
+					{post.data.title}
+				</h1>
+
+				{post.data.image && (
+					<div class="w-full aspect-video bg-gray-900 border border-brand-border overflow-hidden mb-8 grayscale hover:grayscale-0 transition-all duration-500">
+						<Image src={post.data.image} alt={post.data.title} class="w-full h-full object-cover" />
+					</div>
+				)}
+			</div>
+		</header>
+
+		<!-- Article Content -->
+		<article class="p-6 md:p-12">
+			<div class="max-w-3xl mx-auto prose prose-invert prose-lg 
+				prose-headings:font-mono prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-brand-light
+				prose-p:font-sans prose-p:leading-relaxed prose-p:text-gray-300
+				prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline prose-a:decoration-2 prose-a:underline-offset-4
+				prose-strong:text-brand-light prose-strong:font-bold
+				prose-blockquote:border-l-4 prose-blockquote:border-brand-accent prose-blockquote:bg-[#0a0a0a] prose-blockquote:px-6 prose-blockquote:py-2 prose-blockquote:font-mono prose-blockquote:not-italic prose-blockquote:text-gray-400
+				prose-ul:list-square prose-li:marker:text-brand-accent
+				prose-code:text-brand-accent prose-code:bg-[#111] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-none prose-code:font-mono prose-code:before:content-none prose-code:after:content-none
+				prose-pre:bg-[#111] prose-pre:border prose-pre:border-brand-border prose-pre:rounded-none
+				prose-hr:border-brand-border">
+				<Content />
+			</div>
+		</article>
+
+        <!-- Footer Navigation -->
+        <div class="border-t border-brand-border p-12 text-center">
+             <a href="/" class="font-mono text-xl font-bold hover:text-brand-accent hover:underline decoration-2 underline-offset-4">
+                /// END_OF_TRANSMISSION ///
+             </a>
+        </div>
+	</main>
+</Layout>

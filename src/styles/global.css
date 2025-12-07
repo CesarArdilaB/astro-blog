@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* Fonts */
@@ -7,8 +8,8 @@
 
   /* Colors */
   --color-brand-dark: #050505;
-  --color-brand-light: #F0F0F0;
-  --color-brand-accent: #FF4500;
+  --color-brand-light: #f0f0f0;
+  --color-brand-accent: #ff4500;
   --color-brand-border: #333333;
 
   /* Animations */
@@ -20,7 +21,7 @@
   .glitch-text {
     position: relative;
   }
-  
+
   .glitch-text::before,
   .glitch-text::after {
     content: attr(data-text);
@@ -49,7 +50,7 @@
   .glitch-text-light {
     position: relative;
   }
-  
+
   .glitch-text-light::before,
   .glitch-text-light::after {
     content: attr(data-text);
@@ -77,29 +78,69 @@
 }
 
 @keyframes glitch-anim {
-  0% { clip-path: polygon(0 38%, 100% 38%, 100% 83%, 0 83%); transform: translate(0); }
-  20% { clip-path: polygon(0 7%, 100% 7%, 100% 86%, 0 86%); transform: translate(2px,0); }
-  40% { clip-path: polygon(0 54%, 100% 54%, 100% 14%, 0 14%); transform: translate(-2px,0); }
-  60% { clip-path: polygon(0 2%, 100% 2%, 100% 3%, 0 3%); transform: translate(0); }
-  80% { clip-path: polygon(0 28%, 100% 28%, 100% 96%, 0 96%); transform: translate(1px,0); }
-  100% { clip-path: polygon(0 81%, 100% 81%, 100% 4%, 0 4%); transform: translate(0); }
+  0% {
+    clip-path: polygon(0 38%, 100% 38%, 100% 83%, 0 83%);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: polygon(0 7%, 100% 7%, 100% 86%, 0 86%);
+    transform: translate(2px, 0);
+  }
+  40% {
+    clip-path: polygon(0 54%, 100% 54%, 100% 14%, 0 14%);
+    transform: translate(-2px, 0);
+  }
+  60% {
+    clip-path: polygon(0 2%, 100% 2%, 100% 3%, 0 3%);
+    transform: translate(0);
+  }
+  80% {
+    clip-path: polygon(0 28%, 100% 28%, 100% 96%, 0 96%);
+    transform: translate(1px, 0);
+  }
+  100% {
+    clip-path: polygon(0 81%, 100% 81%, 100% 4%, 0 4%);
+    transform: translate(0);
+  }
 }
 
 @keyframes glitch-anim2 {
-  0% { clip-path: polygon(0 52%, 100% 52%, 100% 20%, 0 20%); transform: translate(0); }
-  20% { clip-path: polygon(0 98%, 100% 98%, 100% 6%, 0 6%); transform: translate(-1px,0); }
-  40% { clip-path: polygon(0 13%, 100% 13%, 100% 89%, 0 89%); transform: translate(1px,0); }
-  60% { clip-path: polygon(0 79%, 100% 79%, 100% 26%, 0 26%); transform: translate(0); }
-  80% { clip-path: polygon(0 41%, 100% 41%, 100% 1%, 0 1%); transform: translate(-1px,0); }
-  100% { clip-path: polygon(0 4%, 100% 4%, 100% 78%, 0 78%); transform: translate(0); }
+  0% {
+    clip-path: polygon(0 52%, 100% 52%, 100% 20%, 0 20%);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: polygon(0 98%, 100% 98%, 100% 6%, 0 6%);
+    transform: translate(-1px, 0);
+  }
+  40% {
+    clip-path: polygon(0 13%, 100% 13%, 100% 89%, 0 89%);
+    transform: translate(1px, 0);
+  }
+  60% {
+    clip-path: polygon(0 79%, 100% 79%, 100% 26%, 0 26%);
+    transform: translate(0);
+  }
+  80% {
+    clip-path: polygon(0 41%, 100% 41%, 100% 1%, 0 1%);
+    transform: translate(-1px, 0);
+  }
+  100% {
+    clip-path: polygon(0 4%, 100% 4%, 100% 78%, 0 78%);
+    transform: translate(0);
+  }
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
-    display: inline-block;
-    animation: marquee 20s linear infinite;
+  display: inline-block;
+  animation: marquee 20s linear infinite;
 }
