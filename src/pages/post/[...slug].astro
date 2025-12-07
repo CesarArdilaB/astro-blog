@@ -49,7 +49,7 @@ const { Content } = await post.render();
 				</h1>
 
 				{post.data.image && (
-					<div class="w-full aspect-video bg-gray-900 border border-brand-border overflow-hidden mb-8 grayscale hover:grayscale-0 transition-all duration-500">
+					<div class="w-full aspect-video bg-gray-900 border border-brand-border overflow-hidden mb-8 rounded-xl shadow-lg">
 						<Image src={post.data.image} alt={post.data.title} class="w-full h-full object-cover" />
 					</div>
 				)}

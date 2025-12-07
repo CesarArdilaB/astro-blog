@@ -8,7 +8,7 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<a href={`/post/${post.slug}`} class="bg-brand-dark p-8 group relative overflow-hidden h-64 flex flex-col justify-between border-r border-brand-border md:last:border-r-0 transition-all duration-300 hover:z-50 hover:scale-[1.01] hover:rounded-xl hover:shadow-[0_0_20px_rgba(255,69,0,0.2)] hover:ring-1 hover:ring-brand-accent">
+<a href={`/post/${post.slug}`} class="bg-brand-dark p-8 group relative overflow-hidden h-64 flex flex-col justify-between border-r border-brand-border md:last:border-r-0 transition-colors duration-300 hover:bg-[#0a0a0a]">
 	<span class="font-mono text-xs text-gray-500 group-hover:text-brand-accent transition-colors duration-300">{post.data.publishDate?.toISOString().split('T')[0].replace(/-/g, '.')}</span>
 	<h4 class="font-mono text-xl md:text-2xl font-bold group-hover:text-brand-light transition-colors duration-300 line-clamp-3">
 		{post.data.title}

@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import PostCard from '../components/PostCard.astro';
 
 const posts = await getCollection('post');
-const sortedPosts = posts.sort((a, b) => {
+const _sortedPosts = posts.sort((a, b) => {
 	// Handle cases where publishDate might be undefined, though schema says optional, let's be safe
 	const dateA = a.data.publishDate ? new Date(a.data.publishDate).getTime() : 0;
 	const dateB = b.data.publishDate ? new Date(b.data.publishDate).getTime() : 0;
@@ -61,7 +61,7 @@ const sortedPosts = posts.sort((a, b) => {
 				<h3 class="font-mono text-lg tracking-widest">TRANSMISSIONS_LOG</h3>
 			</div>
 
-			{sortedPosts.map((post) => (
+			{_sortedPosts.map((post) => (
 				<PostCard post={post} />
 			))}
 			
