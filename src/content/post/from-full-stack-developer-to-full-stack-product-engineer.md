@@ -105,3 +105,7 @@ Your move.
 <a href="https://karat.com/ai-engineering-skills-gap/" target="_blank" rel="noopener noreferrer">Karat. "AI Is Widening the Engineering Skills Gap." 2025.</a>
 
 <a href="https://cjroth.com/blog/2026-02-18-building-an-elite-engineering-culture" target="_blank" rel="noopener noreferrer">Roth, Chris. "Building an Elite AI Engineering Culture in 2026." February 18, 2026.</a>
+
+---
+
+With love, Cesar Ardila 🎵
