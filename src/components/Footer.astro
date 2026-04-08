@@ -1,18 +1,96 @@
 ---
 ---
 
-<footer class="col-span-1 md:col-span-12 bg-brand-dark p-6 md:p-12 border-t border-brand-border flex flex-col md:flex-row justify-between items-start md:items-center font-mono text-xs md:text-sm text-gray-500 gap-6">
-	<div class="flex flex-col gap-2">
-		<p>System Status: <span class="text-green-500">Online</span></p>
-		<p>Location: Earth</p>
-		<p>bpm: 128</p>
+<footer class="col-span-1 md:col-span-12 bg-brand-dark border-t border-brand-border font-mono text-xs md:text-sm text-gray-500">
+	<!-- Newsletter -->
+	<div class="p-6 md:p-12 border-b border-brand-border">
+		<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+			<div class="flex items-center gap-3">
+				<div class="w-2 h-2 bg-brand-accent"></div>
+				<p class="text-sm tracking-widest uppercase">Subscribe_to_transmissions</p>
+			</div>
+			<form id="newsletter-form" class="flex gap-2 w-full md:w-auto">
+				<input
+					type="email"
+					name="email"
+					required
+					placeholder="your@email.com"
+					class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-2 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent w-full md:w-64"
+				/>
+				<button
+					type="submit"
+					class="bg-brand-accent text-brand-dark px-4 py-2 text-sm font-bold tracking-wider uppercase hover:bg-orange-600 transition-colors whitespace-nowrap"
+				>
+					SUBSCRIBE
+				</button>
+			</form>
+		</div>
+		<p id="newsletter-msg" class="mt-3 text-xs tracking-wide hidden"></p>
 	</div>
 
-	<div class="flex gap-8">
-		<a href="https://twitter.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">TWITTER</a>
-		<a href="https://github.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">GITHUB</a>
-		<a href="https://www.linkedin.com/in/cesarardilab/" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">LINKEDIN</a>
-		<a href="https://instagram.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">INSTAGRAM</a>
-		<a href="mailto:hello@cesar.ships" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">EMAIL</a>
+	<!-- Footer links -->
+	<div class="p-6 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+		<div class="flex flex-col gap-2">
+			<p>System Status: <span class="text-green-500">Online</span></p>
+			<p>Location: Earth</p>
+			<p>bpm: 128</p>
+		</div>
+
+		<div class="flex flex-wrap gap-6 md:gap-8">
+			<a href="https://twitter.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">TWITTER</a>
+			<a href="https://github.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">GITHUB</a>
+			<a href="https://www.linkedin.com/in/cesarardilab/" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">LINKEDIN</a>
+			<a href="https://instagram.com/CesarArdilaB" target="_blank" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">INSTAGRAM</a>
+			<a href="/contact" class="hover:text-brand-accent hover:underline decoration-2 underline-offset-4">CONTACT</a>
+		</div>
 	</div>
 </footer>
+
+<script is:inline>
+	document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const msg = document.getElementById('newsletter-msg');
+		const email = form.email.value;
+		const btn = form.querySelector('button');
+
+		btn.textContent = 'SENDING...';
+		btn.disabled = true;
+
+		try {
+			const res = await fetch('https://api.brevo.com/v3/contacts', {
+				method: 'POST',
+				headers: {
+					'api-key': 'YOUR_BREVO_API_KEY',
+					'Content-Type': 'application/json',
+					'Accept': 'application/json',
+				},
+				body: JSON.stringify({
+					email,
+					listIds: [YOUR_BREVO_LIST_ID],
+					updateEnabled: true,
+				}),
+			});
+
+			if (res.ok || res.status === 204) {
+				msg.textContent = '/// TRANSMISSION RECEIVED. YOU\'RE IN.';
+				msg.className = 'mt-3 text-xs tracking-wide text-green-500';
+				form.reset();
+			} else {
+				const data = await res.json().catch(() => ({}));
+				if (data.code === 'duplicate_parameter') {
+					msg.textContent = '/// ALREADY SUBSCRIBED. STANDING BY.';
+					msg.className = 'mt-3 text-xs tracking-wide text-brand-accent';
+				} else {
+					throw new Error(data.message || 'Subscription failed');
+				}
+			}
+		} catch (err) {
+			msg.textContent = '/// ERROR: ' + err.message;
+			msg.className = 'mt-3 text-xs tracking-wide text-red-500';
+		} finally {
+			btn.textContent = 'SUBSCRIBE';
+			btn.disabled = false;
+		}
+	});
+</script>

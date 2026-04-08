@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<main class="min-h-screen grid grid-cols-1 md:grid-cols-12 gap-px bg-brand-border border border-brand-border">
+
+		<!-- Header -->
+		<div class="col-span-1 md:col-span-12 bg-brand-dark p-6 border-b border-brand-border flex items-center justify-between">
+			<a href="/" class="font-mono text-sm text-gray-500 hover:text-brand-accent transition-colors">
+				<span class="mr-2">&larr;</span> RETURN_TO_BASE
+			</a>
+			<span class="font-mono text-xl tracking-tighter font-bold bg-brand-accent text-brand-dark px-1">cesar.ships</span>
+		</div>
+
+		<!-- Contact Form -->
+		<div class="col-span-1 md:col-span-12 bg-brand-dark p-12 md:p-24">
+			<div class="max-w-2xl mx-auto">
+				<div class="flex items-center gap-3 mb-4">
+					<div class="w-3 h-3 bg-brand-accent"></div>
+					<h1 class="font-mono text-lg tracking-widest uppercase">OPEN_CHANNEL</h1>
+				</div>
+				<p class="font-sans text-gray-400 mb-12">
+					Got a question, idea, or just want to say hi? Send a transmission.
+				</p>
+
+				<form id="contact-form" class="flex flex-col gap-6">
+					<div class="flex flex-col gap-2">
+						<label for="contact-name" class="font-mono text-xs tracking-widest text-gray-500 uppercase">Name</label>
+						<input
+							type="text"
+							id="contact-name"
+							name="name"
+							required
+							placeholder="Your name"
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent"
+						/>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<label for="contact-email" class="font-mono text-xs tracking-widest text-gray-500 uppercase">Email</label>
+						<input
+							type="email"
+							id="contact-email"
+							name="email"
+							required
+							placeholder="your@email.com"
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent"
+						/>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<label for="contact-subject" class="font-mono text-xs tracking-widest text-gray-500 uppercase">Subject</label>
+						<input
+							type="text"
+							id="contact-subject"
+							name="subject"
+							required
+							placeholder="What's this about?"
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent"
+						/>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<label for="contact-message" class="font-mono text-xs tracking-widest text-gray-500 uppercase">Message</label>
+						<textarea
+							id="contact-message"
+							name="message"
+							required
+							rows="6"
+							placeholder="Your message..."
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent resize-none"
+						></textarea>
+					</div>
+
+					<button
+						type="submit"
+						class="bg-brand-accent text-brand-dark px-6 py-3 text-sm font-mono font-bold tracking-widest uppercase hover:bg-orange-600 transition-colors self-start"
+					>
+						SEND_TRANSMISSION
+					</button>
+				</form>
+
+				<p id="contact-msg" class="mt-6 text-sm font-mono tracking-wide hidden"></p>
+			</div>
+		</div>
+
+		<Footer />
+	</main>
+</Layout>
+
+<script is:inline>
+	document.getElementById('contact-form').addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const msg = document.getElementById('contact-msg');
+		const btn = form.querySelector('button');
+		const name = form.name.value;
+		const email = form.email.value;
+		const subject = form.subject.value;
+		const message = form.message.value;
+
+		btn.textContent = 'TRANSMITTING...';
+		btn.disabled = true;
+
+		try {
+			const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+				method: 'POST',
+				headers: {
+					'api-key': 'YOUR_BREVO_API_KEY',
+					'Content-Type': 'application/json',
+					'Accept': 'application/json',
+				},
+				body: JSON.stringify({
+					sender: {
+						name: 'cesar.ships Contact Form',
+						email: 'YOUR_VERIFIED_SENDER@yourdomain.com',
+					},
+					to: [{
+						email: 'YOUR_RECEIVING_EMAIL@yourdomain.com',
+						name: 'Cesar Ardila',
+					}],
+					replyTo: { email, name },
+					subject: '[cesar.ships] ' + subject,
+					htmlContent: '<h2>New transmission from ' + name + '</h2>' +
+						'<p><strong>From:</strong> ' + name + ' (' + email + ')</p>' +
+						'<p><strong>Subject:</strong> ' + subject + '</p>' +
+						'<hr>' +
+						'<p>' + message.replace(/\n/g, '<br>') + '</p>',
+				}),
+			});
+
+			if (res.ok) {
+				msg.textContent = '/// TRANSMISSION SENT SUCCESSFULLY. I\'LL GET BACK TO YOU.';
+				msg.className = 'mt-6 text-sm font-mono tracking-wide text-green-500';
+				form.reset();
+			} else {
+				const data = await res.json().catch(() => ({}));
+				throw new Error(data.message || 'Failed to send');
+			}
+		} catch (err) {
+			msg.textContent = '/// ERROR: ' + err.message;
+			msg.className = 'mt-6 text-sm font-mono tracking-wide text-red-500';
+		} finally {
+			btn.textContent = 'SEND_TRANSMISSION';
+			btn.disabled = false;
+		}
+	});
+</script>
