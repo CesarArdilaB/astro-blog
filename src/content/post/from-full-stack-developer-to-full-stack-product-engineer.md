@@ -22,7 +22,7 @@ And yet most developers are still waiting for a brief. Waiting for a designer to
 
 Meanwhile, the engineers gaining the most traction aren't waiting at all. They're shaping the brief.
 
-Research from elite tech teams confirms what's already visible on the ground: the developer role is shifting from **code author** to **code reviewer** — someone who directs, validates, and orchestrates rather than writing line by line. Senior engineers who embrace this are realizing nearly **5x the productivity gains** of those who treat AI as just a faster autocomplete.
+Research from elite tech teams confirms what's already visible on the ground: <a href="https://research.google/blog/ai-in-software-engineering-at-google-progress-and-the-path-ahead/" target="_blank" rel="noopener noreferrer">the developer role is shifting from **code author** to **code reviewer**</a> — someone who directs, validates, and orchestrates rather than writing line by line. <a href="https://karat.com/ai-engineering-skills-gap/" target="_blank" rel="noopener noreferrer">Senior engineers who embrace this are realizing nearly **5x the productivity gains**</a> of those who treat AI as just a faster autocomplete.
 
 This isn't a prediction. It's already happening. The question is whether you'll lead it or react to it.
 
@@ -48,7 +48,7 @@ Most developers use AI to write faster code. That's the floor, not the ceiling.
 
 The real leverage comes from learning to orchestrate AI agents as a system — using hooks to trigger automated actions, spinning up subagents for parallel tasks, and composing workflows that execute complex, multi-step work with minimal manual intervention.
 
-But none of that matters without a quality foundation. **Test-driven development is the cornerstone of working with AI agents responsibly.** Kent Beck, the creator of TDD, calls it a "superpower" in the AI era — your test suite is the feedback loop that keeps agent-generated code honest. Without it, you're not engineering. You're gambling.
+But none of that matters without a quality foundation. <a href="https://cjroth.com/blog/2026-02-18-building-an-elite-engineering-culture" target="_blank" rel="noopener noreferrer">**Test-driven development is the cornerstone of working with AI agents responsibly.**</a> Kent Beck, the creator of TDD, calls it a "superpower" in the AI era — your test suite is the feedback loop that keeps agent-generated code honest. Without it, you're not engineering. You're gambling.
 
 ### 2. Get Comfortable Talking to Users
 
@@ -74,7 +74,7 @@ Full-stack developers are trained to think in solutions — *"How do I build thi
 
 Full-stack product engineers think in problems first — *"Should we build this, and why?"*
 
-This means front-loading effort into detailed specifications before touching any code. Elite teams call this **spec-driven development**, and it's one of the most important practices to emerge in the AI era. A good spec doesn't just clarify requirements — it becomes an executable blueprint for your agents.
+This means front-loading effort into detailed specifications before touching any code. <a href="https://cjroth.com/blog/2026-02-18-building-an-elite-engineering-culture" target="_blank" rel="noopener noreferrer">Elite teams call this **spec-driven development**</a>, and it's one of the most important practices to emerge in the AI era. A good spec doesn't just clarify requirements — it becomes an executable blueprint for your agents.
 
 ## The Cycle That Separates Builders from Product Thinkers
 
@@ -95,3 +95,13 @@ This transition isn't about doing more work. It's about doing more **meaningful*
 The tools are here. The shift is underway. The developers who recognize it early won't just survive — they'll define the next era of how products get built.
 
 Your move.
+
+---
+
+## Sources
+
+<a href="https://research.google/blog/ai-in-software-engineering-at-google-progress-and-the-path-ahead/" target="_blank" rel="noopener noreferrer">Google Research. "AI in Software Engineering at Google: Progress and the Path Ahead." 2025.</a>
+
+<a href="https://karat.com/ai-engineering-skills-gap/" target="_blank" rel="noopener noreferrer">Karat. "AI Is Widening the Engineering Skills Gap." 2025.</a>
+
+<a href="https://cjroth.com/blog/2026-02-18-building-an-elite-engineering-culture" target="_blank" rel="noopener noreferrer">Roth, Chris. "Building an Elite AI Engineering Culture in 2026." February 18, 2026.</a>
