@@ -14,8 +14,10 @@
 					type="email"
 					name="email"
 					required
+					autocomplete="email"
+					pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
 					placeholder="your@email.com"
-					class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-2 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent w-full md:w-64"
+					class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-2 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent invalid:border-red-500 w-full md:w-64"
 				/>
 				<button
 					type="submit"
@@ -54,8 +56,16 @@
 		const email = form.email.value;
 		const btn = form.querySelector('button');
 
+		const trimmedEmail = email.trim();
+		if (!trimmedEmail || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(trimmedEmail)) {
+			msg.textContent = '/// INVALID EMAIL FORMAT.';
+			msg.className = 'mt-3 text-xs tracking-wide text-red-500';
+			return;
+		}
+
 		btn.textContent = 'SENDING...';
 		btn.disabled = true;
+		btn.classList.add('opacity-50', 'cursor-not-allowed');
 
 		try {
 			const res = await fetch('https://api.brevo.com/v3/contacts', {
@@ -66,7 +76,7 @@
 					'Accept': 'application/json',
 				},
 				body: JSON.stringify({
-					email,
+					email: trimmedEmail,
 					listIds: [YOUR_BREVO_LIST_ID],
 					updateEnabled: true,
 				}),
@@ -91,6 +101,7 @@
 		} finally {
 			btn.textContent = 'SUBSCRIBE';
 			btn.disabled = false;
+			btn.classList.remove('opacity-50', 'cursor-not-allowed');
 		}
 	});
 </script>

@@ -31,10 +31,13 @@ import Footer from '../components/Footer.astro';
 						<input
 							type="text"
 							id="contact-name"
-							name="name"
+							name="sender_name"
 							required
+							minlength="2"
+							maxlength="100"
+							autocomplete="name"
 							placeholder="Your name"
-							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent"
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent invalid:border-red-500"
 						/>
 					</div>
 
@@ -45,8 +48,10 @@ import Footer from '../components/Footer.astro';
 							id="contact-email"
 							name="email"
 							required
+							autocomplete="email"
+							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
 							placeholder="your@email.com"
-							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent"
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent invalid:border-red-500"
 						/>
 					</div>
 
@@ -57,8 +62,10 @@ import Footer from '../components/Footer.astro';
 							id="contact-subject"
 							name="subject"
 							required
+							minlength="3"
+							maxlength="200"
 							placeholder="What's this about?"
-							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent"
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent invalid:border-red-500"
 						/>
 					</div>
 
@@ -68,9 +75,11 @@ import Footer from '../components/Footer.astro';
 							id="contact-message"
 							name="message"
 							required
+							minlength="10"
+							maxlength="5000"
 							rows="6"
 							placeholder="Your message..."
-							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent resize-none"
+							class="bg-[#0a0a0a] border border-brand-border text-brand-light px-4 py-3 text-sm font-mono tracking-wide placeholder:text-gray-600 focus:outline-none focus:border-brand-accent invalid:border-red-500 resize-none"
 						></textarea>
 					</div>
 
@@ -91,21 +100,46 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <script is:inline>
+	function sanitize(str) {
+		var el = document.createElement('div');
+		el.textContent = str;
+		return el.innerHTML;
+	}
+
 	document.getElementById('contact-form').addEventListener('submit', async (e) => {
 		e.preventDefault();
-		const form = e.target;
-		const msg = document.getElementById('contact-msg');
-		const btn = form.querySelector('button');
-		const name = form.name.value;
-		const email = form.email.value;
-		const subject = form.subject.value;
-		const message = form.message.value;
+		var form = e.target;
+		var msg = document.getElementById('contact-msg');
+		var btn = form.querySelector('button');
+		var name = form.sender_name.value.trim();
+		var email = form.email.value.trim();
+		var subject = form.subject.value.trim();
+		var message = form.message.value.trim();
+
+		// Client-side validation
+		var errors = [];
+		if (name.length < 2) errors.push('Name must be at least 2 characters.');
+		if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errors.push('Please enter a valid email.');
+		if (subject.length < 3) errors.push('Subject must be at least 3 characters.');
+		if (message.length < 10) errors.push('Message must be at least 10 characters.');
+
+		if (errors.length > 0) {
+			msg.textContent = '/// ' + errors[0].toUpperCase();
+			msg.className = 'mt-6 text-sm font-mono tracking-wide text-red-500';
+			return;
+		}
 
 		btn.textContent = 'TRANSMITTING...';
 		btn.disabled = true;
+		btn.classList.add('opacity-50', 'cursor-not-allowed');
 
 		try {
-			const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+			var safeName = sanitize(name);
+			var safeEmail = sanitize(email);
+			var safeSubject = sanitize(subject);
+			var safeMessage = sanitize(message).replace(/\n/g, '<br>');
+
+			var res = await fetch('https://api.brevo.com/v3/smtp/email', {
 				method: 'POST',
 				headers: {
 					'api-key': 'YOUR_BREVO_API_KEY',
@@ -121,13 +155,13 @@ import Footer from '../components/Footer.astro';
 						email: 'YOUR_RECEIVING_EMAIL@yourdomain.com',
 						name: 'Cesar Ardila',
 					}],
-					replyTo: { email, name },
+					replyTo: { email: email, name: name },
 					subject: '[cesar.ships] ' + subject,
-					htmlContent: '<h2>New transmission from ' + name + '</h2>' +
-						'<p><strong>From:</strong> ' + name + ' (' + email + ')</p>' +
-						'<p><strong>Subject:</strong> ' + subject + '</p>' +
+					htmlContent: '<h2>New transmission from ' + safeName + '</h2>' +
+						'<p><strong>From:</strong> ' + safeName + ' (' + safeEmail + ')</p>' +
+						'<p><strong>Subject:</strong> ' + safeSubject + '</p>' +
 						'<hr>' +
-						'<p>' + message.replace(/\n/g, '<br>') + '</p>',
+						'<p>' + safeMessage + '</p>',
 				}),
 			});
 
@@ -136,15 +170,16 @@ import Footer from '../components/Footer.astro';
 				msg.className = 'mt-6 text-sm font-mono tracking-wide text-green-500';
 				form.reset();
 			} else {
-				const data = await res.json().catch(() => ({}));
+				var data = await res.json().catch(function() { return {}; });
 				throw new Error(data.message || 'Failed to send');
 			}
 		} catch (err) {
-			msg.textContent = '/// ERROR: ' + err.message;
+			msg.textContent = '/// ERROR: TRANSMISSION FAILED. PLEASE TRY AGAIN.';
 			msg.className = 'mt-6 text-sm font-mono tracking-wide text-red-500';
 		} finally {
 			btn.textContent = 'SEND_TRANSMISSION';
 			btn.disabled = false;
+			btn.classList.remove('opacity-50', 'cursor-not-allowed');
 		}
 	});
 </script>
