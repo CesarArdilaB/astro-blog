@@ -8,5 +8,100 @@ const latest = posts.sort((a, b) => {
   return dateB - dateA;
 })[0];
 
-return Astro.redirect(`/post/${latest.slug}/`);
+const redirectUrl = `/post/${latest.slug}/`;
 ---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={redirectUrl} />
+    <title>Redirecting...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        background: #050505;
+        color: #f0f0f0;
+        font-family: 'Space Mono', monospace;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        position: relative;
+      }
+
+      .label {
+        font-size: 0.75rem;
+        letter-spacing: 0.3em;
+        color: #555;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 2rem;
+      }
+
+      .title span {
+        color: #ff4500;
+      }
+
+      .bar-track {
+        width: 200px;
+        height: 3px;
+        background: #333;
+        margin: 0 auto 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background: #ff4500;
+        animation: fill 0.6s ease-out forwards;
+      }
+
+      .status {
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        color: #444;
+      }
+
+      @keyframes fill {
+        to { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="label">/// latest transmission</p>
+      <p class="title">Redirecting<span>_</span></p>
+      <div class="bar-track">
+        <div class="bar-fill"></div>
+      </div>
+      <p class="status">LOADING TRANSMISSION...</p>
+    </div>
+    <script define:vars={{ redirectUrl }}>
+      setTimeout(() => { window.location.href = redirectUrl; }, 600);
+    </script>
+  </body>
+</html>
