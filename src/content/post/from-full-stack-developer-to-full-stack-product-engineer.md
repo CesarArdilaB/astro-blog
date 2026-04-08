@@ -78,9 +78,13 @@ This means front-loading effort into detailed specifications before touching any
 
 ## The Cycle That Separates Builders from Product Thinkers
 
-Product engineers don't just ship and move on. They watch how users interact with what they built, extract insights, and feed that back into the next cycle.
+Product engineers don't just ship and move on. They instrument what they build, watch how users actually interact with it, and let the data shape what comes next.
 
-Ship. Observe. Learn. Iterate. Repeat.
+This means owning your product analytics stack. Tools like **PostHog**, **Amplitude**, or **Mixpanel** let you track feature adoption, measure conversion funnels, and run experiments — all things that used to live exclusively in a product manager's dashboard. Set up event tracking on the features you ship. Define the metrics that matter *before* you deploy. Monitor retention, activation, and drop-off points *after*.
+
+The developer who ships a feature and can say *"adoption is at 34%, but users drop off at step 3 of the onboarding flow — here's what I'd change"* is infinitely more valuable than the one who says *"it's deployed, what's next?"*
+
+Ship. Observe. Measure. Iterate. Repeat.
 
 This is the loop that turns a developer into someone who shapes products, not just executes on them.
 
