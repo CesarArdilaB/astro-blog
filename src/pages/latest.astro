@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('post');
+const latest = posts.sort((a, b) => {
+  const dateA = a.data.publishDate ? new Date(a.data.publishDate).getTime() : 0;
+  const dateB = b.data.publishDate ? new Date(b.data.publishDate).getTime() : 0;
+  return dateB - dateA;
+})[0];
+
+return Astro.redirect(`/post/${latest.slug}/`);
+---
