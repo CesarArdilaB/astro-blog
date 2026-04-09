@@ -1,0 +1,105 @@
+{
+  "total_chunks": 20,
+  "chunks": [
+    {
+      "chunk_number": 1,
+      "char_count": 2447,
+      "file": "Made To Stick PDF_chunk_001.txt"
+    },
+    {
+      "chunk_number": 2,
+      "char_count": 2781,
+      "file": "Made To Stick PDF_chunk_002.txt"
+    },
+    {
+      "chunk_number": 3,
+      "char_count": 2821,
+      "file": "Made To Stick PDF_chunk_003.txt"
+    },
+    {
+      "chunk_number": 4,
+      "char_count": 2841,
+      "file": "Made To Stick PDF_chunk_004.txt"
+    },
+    {
+      "chunk_number": 5,
+      "char_count": 2920,
+      "file": "Made To Stick PDF_chunk_005.txt"
+    },
+    {
+      "chunk_number": 6,
+      "char_count": 2386,
+      "file": "Made To Stick PDF_chunk_006.txt"
+    },
+    {
+      "chunk_number": 7,
+      "char_count": 2317,
+      "file": "Made To Stick PDF_chunk_007.txt"
+    },
+    {
+      "chunk_number": 8,
+      "char_count": 2829,
+      "file": "Made To Stick PDF_chunk_008.txt"
+    },
+    {
+      "chunk_number": 9,
+      "char_count": 2884,
+      "file": "Made To Stick PDF_chunk_009.txt"
+    },
+    {
+      "chunk_number": 10,
+      "char_count": 2626,
+      "file": "Made To Stick PDF_chunk_010.txt"
+    },
+    {
+      "chunk_number": 11,
+      "char_count": 2593,
+      "file": "Made To Stick PDF_chunk_011.txt"
+    },
+    {
+      "chunk_number": 12,
+      "char_count": 2665,
+      "file": "Made To Stick PDF_chunk_012.txt"
+    },
+    {
+      "chunk_number": 13,
+      "char_count": 2798,
+      "file": "Made To Stick PDF_chunk_013.txt"
+    },
+    {
+      "chunk_number": 14,
+      "char_count": 2988,
+      "file": "Made To Stick PDF_chunk_014.txt"
+    },
+    {
+      "chunk_number": 15,
+      "char_count": 2523,
+      "file": "Made To Stick PDF_chunk_015.txt"
+    },
+    {
+      "chunk_number": 16,
+      "char_count": 2717,
+      "file": "Made To Stick PDF_chunk_016.txt"
+    },
+    {
+      "chunk_number": 17,
+      "char_count": 2779,
+      "file": "Made To Stick PDF_chunk_017.txt"
+    },
+    {
+      "chunk_number": 18,
+      "char_count": 2828,
+      "file": "Made To Stick PDF_chunk_018.txt"
+    },
+    {
+      "chunk_number": 19,
+      "char_count": 2856,
+      "file": "Made To Stick PDF_chunk_019.txt"
+    },
+    {
+      "chunk_number": 20,
+      "char_count": 1691,
+      "file": "Made To Stick PDF_chunk_020.txt"
+    }
+  ]
+}

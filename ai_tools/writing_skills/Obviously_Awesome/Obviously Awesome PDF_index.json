@@ -1,0 +1,225 @@
+{
+  "total_chunks": 44,
+  "chunks": [
+    {
+      "chunk_number": 1,
+      "char_count": 2971,
+      "file": "Obviously Awesome PDF_chunk_001.txt"
+    },
+    {
+      "chunk_number": 2,
+      "char_count": 2543,
+      "file": "Obviously Awesome PDF_chunk_002.txt"
+    },
+    {
+      "chunk_number": 3,
+      "char_count": 2852,
+      "file": "Obviously Awesome PDF_chunk_003.txt"
+    },
+    {
+      "chunk_number": 4,
+      "char_count": 2561,
+      "file": "Obviously Awesome PDF_chunk_004.txt"
+    },
+    {
+      "chunk_number": 5,
+      "char_count": 2970,
+      "file": "Obviously Awesome PDF_chunk_005.txt"
+    },
+    {
+      "chunk_number": 6,
+      "char_count": 2203,
+      "file": "Obviously Awesome PDF_chunk_006.txt"
+    },
+    {
+      "chunk_number": 7,
+      "char_count": 2306,
+      "file": "Obviously Awesome PDF_chunk_007.txt"
+    },
+    {
+      "chunk_number": 8,
+      "char_count": 2218,
+      "file": "Obviously Awesome PDF_chunk_008.txt"
+    },
+    {
+      "chunk_number": 9,
+      "char_count": 2626,
+      "file": "Obviously Awesome PDF_chunk_009.txt"
+    },
+    {
+      "chunk_number": 10,
+      "char_count": 2596,
+      "file": "Obviously Awesome PDF_chunk_010.txt"
+    },
+    {
+      "chunk_number": 11,
+      "char_count": 2827,
+      "file": "Obviously Awesome PDF_chunk_011.txt"
+    },
+    {
+      "chunk_number": 12,
+      "char_count": 2414,
+      "file": "Obviously Awesome PDF_chunk_012.txt"
+    },
+    {
+      "chunk_number": 13,
+      "char_count": 2999,
+      "file": "Obviously Awesome PDF_chunk_013.txt"
+    },
+    {
+      "chunk_number": 14,
+      "char_count": 2565,
+      "file": "Obviously Awesome PDF_chunk_014.txt"
+    },
+    {
+      "chunk_number": 15,
+      "char_count": 1967,
+      "file": "Obviously Awesome PDF_chunk_015.txt"
+    },
+    {
+      "chunk_number": 16,
+      "char_count": 2810,
+      "file": "Obviously Awesome PDF_chunk_016.txt"
+    },
+    {
+      "chunk_number": 17,
+      "char_count": 2520,
+      "file": "Obviously Awesome PDF_chunk_017.txt"
+    },
+    {
+      "chunk_number": 18,
+      "char_count": 2506,
+      "file": "Obviously Awesome PDF_chunk_018.txt"
+    },
+    {
+      "chunk_number": 19,
+      "char_count": 2511,
+      "file": "Obviously Awesome PDF_chunk_019.txt"
+    },
+    {
+      "chunk_number": 20,
+      "char_count": 2480,
+      "file": "Obviously Awesome PDF_chunk_020.txt"
+    },
+    {
+      "chunk_number": 21,
+      "char_count": 2828,
+      "file": "Obviously Awesome PDF_chunk_021.txt"
+    },
+    {
+      "chunk_number": 22,
+      "char_count": 2925,
+      "file": "Obviously Awesome PDF_chunk_022.txt"
+    },
+    {
+      "chunk_number": 23,
+      "char_count": 2356,
+      "file": "Obviously Awesome PDF_chunk_023.txt"
+    },
+    {
+      "chunk_number": 24,
+      "char_count": 2692,
+      "file": "Obviously Awesome PDF_chunk_024.txt"
+    },
+    {
+      "chunk_number": 25,
+      "char_count": 2861,
+      "file": "Obviously Awesome PDF_chunk_025.txt"
+    },
+    {
+      "chunk_number": 26,
+      "char_count": 2873,
+      "file": "Obviously Awesome PDF_chunk_026.txt"
+    },
+    {
+      "chunk_number": 27,
+      "char_count": 2620,
+      "file": "Obviously Awesome PDF_chunk_027.txt"
+    },
+    {
+      "chunk_number": 28,
+      "char_count": 2745,
+      "file": "Obviously Awesome PDF_chunk_028.txt"
+    },
+    {
+      "chunk_number": 29,
+      "char_count": 2989,
+      "file": "Obviously Awesome PDF_chunk_029.txt"
+    },
+    {
+      "chunk_number": 30,
+      "char_count": 2855,
+      "file": "Obviously Awesome PDF_chunk_030.txt"
+    },
+    {
+      "chunk_number": 31,
+      "char_count": 2255,
+      "file": "Obviously Awesome PDF_chunk_031.txt"
+    },
+    {
+      "chunk_number": 32,
+      "char_count": 2689,
+      "file": "Obviously Awesome PDF_chunk_032.txt"
+    },
+    {
+      "chunk_number": 33,
+      "char_count": 2650,
+      "file": "Obviously Awesome PDF_chunk_033.txt"
+    },
+    {
+      "chunk_number": 34,
+      "char_count": 2852,
+      "file": "Obviously Awesome PDF_chunk_034.txt"
+    },
+    {
+      "chunk_number": 35,
+      "char_count": 2914,
+      "file": "Obviously Awesome PDF_chunk_035.txt"
+    },
+    {
+      "chunk_number": 36,
+      "char_count": 2935,
+      "file": "Obviously Awesome PDF_chunk_036.txt"
+    },
+    {
+      "chunk_number": 37,
+      "char_count": 2832,
+      "file": "Obviously Awesome PDF_chunk_037.txt"
+    },
+    {
+      "chunk_number": 38,
+      "char_count": 2882,
+      "file": "Obviously Awesome PDF_chunk_038.txt"
+    },
+    {
+      "chunk_number": 39,
+      "char_count": 2880,
+      "file": "Obviously Awesome PDF_chunk_039.txt"
+    },
+    {
+      "chunk_number": 40,
+      "char_count": 2773,
+      "file": "Obviously Awesome PDF_chunk_040.txt"
+    },
+    {
+      "chunk_number": 41,
+      "char_count": 2806,
+      "file": "Obviously Awesome PDF_chunk_041.txt"
+    },
+    {
+      "chunk_number": 42,
+      "char_count": 2625,
+      "file": "Obviously Awesome PDF_chunk_042.txt"
+    },
+    {
+      "chunk_number": 43,
+      "char_count": 2741,
+      "file": "Obviously Awesome PDF_chunk_043.txt"
+    },
+    {
+      "chunk_number": 44,
+      "char_count": 2495,
+      "file": "Obviously Awesome PDF_chunk_044.txt"
+    }
+  ]
+}

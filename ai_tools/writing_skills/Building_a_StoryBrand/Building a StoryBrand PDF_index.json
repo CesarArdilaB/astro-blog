@@ -1,0 +1,75 @@
+{
+  "total_chunks": 14,
+  "chunks": [
+    {
+      "chunk_number": 1,
+      "char_count": 2868,
+      "file": "Building a StoryBrand PDF_chunk_001.txt"
+    },
+    {
+      "chunk_number": 2,
+      "char_count": 2282,
+      "file": "Building a StoryBrand PDF_chunk_002.txt"
+    },
+    {
+      "chunk_number": 3,
+      "char_count": 2751,
+      "file": "Building a StoryBrand PDF_chunk_003.txt"
+    },
+    {
+      "chunk_number": 4,
+      "char_count": 2854,
+      "file": "Building a StoryBrand PDF_chunk_004.txt"
+    },
+    {
+      "chunk_number": 5,
+      "char_count": 2642,
+      "file": "Building a StoryBrand PDF_chunk_005.txt"
+    },
+    {
+      "chunk_number": 6,
+      "char_count": 2545,
+      "file": "Building a StoryBrand PDF_chunk_006.txt"
+    },
+    {
+      "chunk_number": 7,
+      "char_count": 2533,
+      "file": "Building a StoryBrand PDF_chunk_007.txt"
+    },
+    {
+      "chunk_number": 8,
+      "char_count": 2545,
+      "file": "Building a StoryBrand PDF_chunk_008.txt"
+    },
+    {
+      "chunk_number": 9,
+      "char_count": 1943,
+      "file": "Building a StoryBrand PDF_chunk_009.txt"
+    },
+    {
+      "chunk_number": 10,
+      "char_count": 2736,
+      "file": "Building a StoryBrand PDF_chunk_010.txt"
+    },
+    {
+      "chunk_number": 11,
+      "char_count": 2497,
+      "file": "Building a StoryBrand PDF_chunk_011.txt"
+    },
+    {
+      "chunk_number": 12,
+      "char_count": 2439,
+      "file": "Building a StoryBrand PDF_chunk_012.txt"
+    },
+    {
+      "chunk_number": 13,
+      "char_count": 2955,
+      "file": "Building a StoryBrand PDF_chunk_013.txt"
+    },
+    {
+      "chunk_number": 14,
+      "char_count": 1453,
+      "file": "Building a StoryBrand PDF_chunk_014.txt"
+    }
+  ]
+}
