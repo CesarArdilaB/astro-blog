@@ -121,6 +121,8 @@ Most teams do not see the gap yet because the output looks fine. The PRs are mer
 
 The window to close it is open. It will not stay that way.
 
+If you want to see what this looks like at the individual level, I wrote about how developers can make this transition themselves: <a href="/post/from-full-stack-developer-to-full-stack-product-engineer/" target="_blank" rel="noopener noreferrer">From Full-Stack Developer to Full-Stack Product Engineer</a>.
+
 ---
 
 ## Sources
