@@ -2,7 +2,7 @@
 publishDate: 2026-04-07T00:00:00Z
 title: "From Full-Stack Developer to Full-Stack Product Engineer"
 excerpt: "The full-stack developer role is evolving. AI is collapsing the gap between disciplines, and the developers who expand beyond code into research, prototyping, and product ownership will become the most valuable people on any team."
-image: "../../assets/images/blog/full-stack-product-engineer.svg"
+image: "../../assets/images/blog/from-full-stack-developer-to-product-engineer-og.png"
 tags:
   - product-engineering
   - ai

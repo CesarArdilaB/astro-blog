@@ -2,7 +2,7 @@
 publishDate: 2026-04-13T00:00:00Z
 title: "AI Is Widening the Gap, and Most Teams Don't See It Yet"
 excerpt: "Senior engineers using AI realize nearly 5x the productivity gains of juniors on the same tools. The difference is not the AI. It is the engineering discipline underneath it, starting with DevOps."
-image: "../../assets/images/blog/ai-is-widening-the-gap.svg"
+image: "../../assets/images/blog/ai-widening-engineering-gap-devops-og.png"
 tags:
   - ai
   - devops
