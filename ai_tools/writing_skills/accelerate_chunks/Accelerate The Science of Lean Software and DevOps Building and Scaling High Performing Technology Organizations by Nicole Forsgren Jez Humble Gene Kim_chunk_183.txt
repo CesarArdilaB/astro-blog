@@ -1,0 +1,98 @@
+=== CHUNK 183 de 191 ===
+=== Caracteres: 2285 ===
+
+sfaction, 24, 116
+D
+dashboards, 77, 206
+data, 169-175
+bad, 163-165
+collecting and analyzing, 158-159, 169-172
+system, 157-158, 160-162
+trusting, 162-165
+debugging someone else’s code, 66
+
+[PÁGINA 266]
+
+decision-making, 36
+focusing on, 109
+delivery lead time. See lead time
+delivery performance
+analyzing, 18-23
+correlated with:
+change approval process, 78-81, 217
+continuous delivery, 48, 98
+deployment frequency, 216
+investment in DevOps, 122, 213, 221
+job satisfaction, 106, 108
+Lean management, 77, 84, 87, 98, 217
+organizational performance, 98
+tempo/stability, 213
+transformational leadership, 119-120, 219
+trunk-based development, 215
+version control, 162
+Westrum organizational culture, 218
+of high vs. low performers, 212
+impacts of, 24-26, 70
+improving, xxii-xxiii, 26-27, 46, 122
+key capabilities of, 9, 201-209
+measuring, 11-17, 37
+negatively correlated with:
+deployment pain, 213, 215
+integrated environment, 216
+not correlated with:
+approvals for high-risk changes, 217
+type of system, 60-61, 216
+poor, 90, 92
+predicting, 27, 31, 36-37
+Deming, W. Edwards, 27, 42
+departments
+goals of, 43
+moving between, 124
+protecting, 31
+deployment frequency, 14, 16, 37, 79
+correlated with:
+continuous delivery, 213
+
+[PÁGINA 267]
+
+delivery performance, 216
+version control, 213
+in performance analysis, 141
+deployment pain, 89-94
+correlated with burnout, 97, 215
+measuring, 91
+negatively correlated with:
+delivery performance, 64, 213, 215
+organizational culture, 218
+trunk-based development, 215
+Westrum organizational culture, 215, 218
+reducing, 46, 91, 93, 122
+deployment pipeline, 45, 79-80
+deployments
+automated, 45, 80, 92, 109, 202
+complex, 92-93
+continuous. See continuous deployment
+done independently, 62, 216
+during normal business hours, 62, 92
+descriptive analysis, 134-136
+detractors, 103
+DevOps movement, xxiv-xxv, 4, 169-172
+achieving high outcomes of, 120
+in all operating systems, 221
+capabilities of, 5
+correlated with:
+delivery performance, 213, 221
+job satisfaction, 109
+organizational culture, 218
+investment in, 98, 122-123, 213, 215, 218
+reports on current state of, 135
+value of, 9-10
+women and minorities in, 110-113
+DevOpsDays, 123
+DevSecOps, 72
+digital banking, 181
+disability, 94
+disaster recovery testing exercises (DiRT), 125
+discipline, 197
+
+[PÁGINA 268]

@@ -1,0 +1,94 @@
+=== CHUNK 189 de 191 ===
+=== Caracteres: 2064 ===
+
+return on investment (ROI), 24
+rewards, insufficient, 96
+rework
+decreasing with trunk-based development, 215
+of high vs. low performers, 50-51, 213-214
+Ries, Eric, 83
+right mindset, 195
+
+[PÁGINA 280]
+
+Rijkhoff, Jan, 191
+risk
+reducing, 16
+taking, 126
+Risk Management Framework (RMF), 71
+risk management theater, 81
+rituals, 30
+Rugged DevOps, 72
+rule-oriented culture. See bureaucratic culture
+S
+sample, in data analysis, 135
+Scheer, Liedewij van der, 184
+Schuyer, Jael, 184
+Schwartz, Mark, 35
+Scrum rituals, 191
+security
+built into daily work, 67, 72
+shifting left on, 45, 70-72, 91, 203, 220
+time spent on remediating of, 215
+Seddon, John, 52
+segregation of duties, 79
+Shook, John, 39
+short-lived branches, 44, 56, 215
+sick time, 94
+simple linear regression, 211
+single factors, 224
+small batches, 16, 25, 42, 84-88, 205, 220
+Smit, Jannes, 181, 187, 192-193
+snowball sampling, xxv, 172-174, 224
+social norms, 30
+software
+changes in, 79-80
+delivery of. See delivery performance
+importance of, for organizations, 4-5
+mainframe, 60, 216
+outsourcing, 26, 60, 216
+perceived quality of, 50
+strategic, 26
+
+[PÁGINA 281]
+
+Spurious Correlations, 137
+stability
+change approval process and, 79
+focusing on, 43
+increasing, 64
+of high vs. low performers, 10
+vs. performance, 17, 20, 213
+in performance analysis, 141
+trends for, over years, 22
+stand-ups, 186-188
+startups
+culture of, 35
+performance of, 221
+State of DevOps Report, xxiv, 158, 199
+statistical data analysis, 133-135
+storyboards, 77
+Subversion, 201
+suicide, 94
+surveys, 33, 143-145
+anonymity in, 165
+checked for bias, 159
+with obvious agenda, 143-144
+preparation of, 223
+reasons to use, xxv, 157-167
+trusting data reported in, 146-155, 162-165
+weakness of questions in, 145
+system data, 157-158, 160-162
+system health monitoring, 152-153, 206
+systems of engagement, 8, 60-61
+systems of record, 8, 60-61
+T
+Target, 5
+target population, 172
+team experimentation, 86-87, 107, 116, 205
+teams
+choosing their own tools, 48, 66-67, 109, 126, 204, 207
+code review in, 79, 205
+collaborating, 13, 34, 36, 64, 207
+
+[PÁGINA 282]

@@ -1,0 +1,87 @@
+=== CHUNK 3 de 191 ===
+=== Caracteres: 2341 ===
+
+insights that I have heard from no other
+source.”
+—Baron Schwartz, Founder and CEO of VividCortex
+and coauthor of High Performance MySQL
+
+[PÁGINA 5]
+
+ACCELERATE
+
+[PÁGINA 6]
+
+
+
+[PÁGINA 7]
+
+
+
+[PÁGINA 8]
+
+25 NW 23rd Pl, Suite 6314
+Portland, OR 97210
+Copyright © 2018 by Nicole Forsgren, Jez Humble, and Gene Kim.
+Chapter 16 Copyright © 2018 by Karen Whitley Bell and Steve Bell,
+Lean IT Strategies, LLC.
+All rights reserved, for information about permission
+to reproduce selections from this book, write to Permissions, IT Revolution Press,
+LLC, 25 NW 23rd Pl, Suite 6314, Portland, OR 97210
+First Edition
+Printed in the United States of America
+22 21 20 19 18 1 2 3 4 5 6
+Cover and book design by Devon Smith Creative, LLC
+Library of Congress Catalog-in-Publication Data is available upon request.
+ISBN: 978-1942788331
+eBook ISBN: 978-194278355
+Kindle ISBN: 978-194278362
+Web PDF ISBN: 978-194278379
+Publisher’s note to readers: Although the authors and publisher have made every
+effort to ensure that the information in this book is correct, the authors and
+publisher do not assume and hereby disclaim any liability to any party for any loss,
+damage, or disruption caused by errors or omissions, whether such errors or
+omissions result from negligence, accident, or any other cause.
+For information about special discounts for bulk purchases or for information on
+booking authors for an event, please visit our website at www.ITRevolution.com.
+ACCELERATE
+
+[PÁGINA 9]
+
+Contents
+Foreword by Martin Fowler
+Foreword by Courtney Kissler
+Quick Reference: Capabilities to Drive Improvement
+Preface
+Part I: What We Found
+1 Accelerate
+2 Measuring Performance
+3 Measuring and Changing Culture
+4 Technical Practices
+5 Architecture
+6 Integrating Infosec into the Delivery Lifecycle
+7 Management Practices for Software
+8 Product Development
+9 Making Work Sustainable
+10 Employee Satisfaction, Identity, and Engagement
+11 Leaders and Managers
+Part II: The Research
+12 e Science Behind is Book
+13 Introduction to Psychometrics
+14 Why Use a Survey
+15 e Data for the Project
+Part III: Transformation
+
+[PÁGINA 10]
+
+16 High-Performance Leadership and Management
+Conclusion
+Appendix A: Capabilities to Drive Improvement
+Appendix B: e Stats
+Appendix C: Statistical Methods Used in Our Research
+Acknowledgments
+Bibliography
+Index
+About the Authors
+
+[PÁGINA 11]

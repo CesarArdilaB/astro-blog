@@ -1,0 +1,49 @@
+=== CHUNK 77 de 191 ===
+=== Caracteres: 2684 ===
+
+uous
+delivery on the Bing team, engineers reported work/life balance
+satisfaction scores of just 38%. After implementing these technical
+practices, the scores jumped to 75%. e difference is striking. It means
+the technical staff were better able to manage their professional duties
+during work hours, they didn’t have to do deployment processes
+manually, and they were able to keep the stresses of work at work.
+While deployment pain can be an indication that software
+development and delivery is not sustainable in your organization, it is also
+a concern when development and test teams have no idea what
+deployments are like. If your teams have no visibility into code
+deployments—that is, if you ask your teams what software deployments
+are like and the answer is, “I don’t know . . . I’ve never thought about it!”—
+
+[PÁGINA 116]
+
+that’s another warning that software delivery performance could be low,
+because if developers or testers aren’t aware of the deployment process,
+there are probably barriers hiding the work from them. And barriers that
+hide the work of deployment from developers are rarely good, because
+they isolate developers from the downstream consequences of their work.
+We often have developers, and especially operations professionals, ask
+us, “What can be done to relieve deployment pain and improve the work of
+technical staff?” To answer this question, we included deployment pain in
+our research in 2015, 2016, and 2017. Based on our own experiences in
+software development and delivery and our time spent talking to people
+working with systems, we created a measure to capture how people feel
+when code is deployed. Measuring deployment pain ended up being
+relatively straightforward: we asked respondents if deployments were
+feared, disruptive in their work, or, in contrast, if they were easy and pain-
+free.
+Our research shows that improving key technical capabilities reduces
+deployment pain: teams that implement comprehensive test and
+deployment automation; use continuous integration, including trunk-
+based development; shift left on security; effectively manage test data; use
+loosely coupled architectures; can work independently; and use version
+control of everything required to reproduce production environments
+decrease their deployment pain.
+Put another way, the technical practices that improve our ability to
+deliver software with both speed and stability also reduce the stress and
+anxiety associated with pushing code to production. ese technical
+practices are outlined in Chapters 4 and 5.
+Statistical analysis also revealed a high correlation between
+deployment pain and key outcomes: the more painful code deployments
+
+[PÁGINA 117]

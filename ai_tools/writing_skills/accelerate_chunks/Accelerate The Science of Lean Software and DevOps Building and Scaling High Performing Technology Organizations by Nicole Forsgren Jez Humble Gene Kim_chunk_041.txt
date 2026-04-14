@@ -1,0 +1,38 @@
+=== CHUNK 41 de 191 ===
+=== Caracteres: 1967 ===
+
+st step, we conducted several analyses to ensure our survey
+measures were valid and reliable. ese analyses included tests for
+discriminant validity, convergent validity, and reliability.
+
+[PÁGINA 62]
+
+Discriminant validity: making sure that items that are not
+supposed to be related are actually unrelated (e.g., that items that we
+believe are not capturing organizational culture are not, in fact,
+related to it).
+Convergent validity: making sure that items that are supposed to
+be related are actually related (e.g., if measures are supposed to
+measure organizational culture, they do measure it).
+Reliability: making sure the items are read and interpreted
+similarly by those who take the survey. is is also referred to as
+internal consistency.
+Taken together, validity and reliability analyses confirm our measures
+and come before any additional analyses to test for relationships, like
+correlation or prediction. For more on validity and reliability, refer to
+Chapter 13. Additional information about the statistical tests used to
+confirm validity and reliability can be found in Appendix C.
+Our research has consistently found our Westrum construct—an
+indicator of the level of organizational culture that prioritizes trust and
+collaboration in the team—to be both valid and reliable.1 is means you
+can use these questions in your surveys too. To calculate the “score” for
+each survey response, take the numerical value (1-7) corresponding to the
+answer to each question and calculate the mean across all questions. en
+you can perform statistical analysis on the responses as a whole.
+Culture enables information processing through three mechanisms.
+First, in organizations with a generative culture, people collaborate more
+effectively and there is a higher level of trust both across the organization
+and up and down the hierarchy. Second, “generative culture emphasizes the
+mission, an emphasis that allows people involved to put aside their
+
+[PÁGINA 63]

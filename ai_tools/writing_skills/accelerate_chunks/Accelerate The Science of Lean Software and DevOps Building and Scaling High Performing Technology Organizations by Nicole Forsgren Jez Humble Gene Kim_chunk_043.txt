@@ -1,0 +1,41 @@
+=== CHUNK 43 de 191 ===
+=== Caracteres: 2209 ===
+
+ypotheses
+proved to be true. We show these relationships in Figure 3.2.
+Figure 3.2: Westrum Organizational Culture’s Outcomes
+CONSEQUENCES OF WESTRUM‘S THEORY FOR
+TECHNOLOGY ORGANIZATIONS
+
+[PÁGINA 65]
+
+For modern organizations that hope to thrive in the face of increasingly
+rapid technological and economic change, both resilience and the ability to
+innovate through responding to this change are essential. Our research into
+the application of Westrum’s theory to technology shows that these two
+characteristics are connected. Initially developed to predict safety
+outcomes, our research shows it also predicts both software delivery and
+organizational performance. is makes sense, because safety outcomes are
+performance outcomes in a healthcare setting. By extending this to
+technology, we expected this type of organizational culture to positively
+impact software delivery and organizational performance. is mirrors
+research performed by Google into how to create high-performing teams.
+e Delivery Performance Construct
+In Chapter 2, we said that delivery performance combines four metrics:
+lead time, release frequency, time to restore service, and change fail rate.
+When performing cluster analysis, all four metrics together meaningfully
+classify and discriminate among our high, medium, and low performers.
+at is, all four measures are good at categorizing teams. However, when
+we tried to turn these four metrics into a construct, we ran into a problem:
+the four measures don’t pass all of the statistical tests of validity and
+reliability. Analysis showed that only lead time, release frequency, and
+time to restore together form a valid and reliable construct. us, in the
+rest of book, when we talk about software delivery performance it is defined
+using only the combination of those three metrics. Also, when software
+delivery performance is shown to correlate with some other construct, or
+when we talk about predictions involving software delivery performance,
+we’re only talking about the construct as defined and measured this way.
+Note, however, that change fail rate is strongly correlated with the
+software delivery performance construct, which means that in most cases,
+
+[PÁGINA 66]

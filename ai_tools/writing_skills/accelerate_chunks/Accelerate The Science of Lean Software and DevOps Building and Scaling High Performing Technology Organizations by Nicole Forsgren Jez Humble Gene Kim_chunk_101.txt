@@ -1,0 +1,38 @@
+=== CHUNK 101 de 191 ===
+=== Caracteres: 1825 ===
+
+itates collaboration. Make sure success is reproducible and
+pay attention to latent factors that make collaboration easier.
+Use Disaster Recovery Testing Exercises to Build Relationships
+
+[PÁGINA 152]
+
+Many large technology companies run disaster recovery testing exercises,
+or “game days,” in which outages are simulated or actually created
+according to a pre-prepared plan, and teams must work together to
+maintain or restore service levels.
+Kripa Krishnan, Director of Cloud Operations at Google, runs a team
+that plans and executes these exercises. She reports, “For DiRT-style
+events to be successful, an organization first needs to accept system and
+process failures as a means of learning . . . We design tests that require
+engineers from several groups who might not normally work together to
+interact with each other. at way, should a real large-scale disaster ever
+strike, these people will already have strong working relationships”
+(ACMQueue 2012).
+Help create a climate of learning by:
+Creating a training budget and advocating for it internally.
+Emphasize how much the organization values a climate of learning
+by putting resources behind formal education opportunities.
+Ensuring that your team has the resources to engage in
+informal learning and the space to explore ideas. Learning
+often happens outside of formal education. Some companies, like
+3M and Google, have famously set aside a portion of time (15% and
+20%, respectively) for focused free-thinking and exploration of side
+projects.
+Making it safe to fail. If failure is punished, people won’t try new
+things. Treating failures as opportunities to learn and holding
+blameless postmortems to work out how to improve processes and
+systems helps people feel comfortable taking (reasonable) risks,
+and helps create a culture of innovation.
+
+[PÁGINA 153]

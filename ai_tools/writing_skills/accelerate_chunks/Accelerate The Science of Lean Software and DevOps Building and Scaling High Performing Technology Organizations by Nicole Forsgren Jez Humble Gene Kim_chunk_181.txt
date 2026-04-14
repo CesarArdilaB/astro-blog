@@ -1,0 +1,90 @@
+=== CHUNK 181 de 191 ===
+=== Caracteres: 2158 ===
+
+pelinessecurity-meets-continuous-
+delivery.
+Widener, Sally K. “An Empirical Analysis of the Levers of Control Framework.” Accounting,
+Organizations and Society 32, no. 7 (2007): 757-788.
+
+[PÁGINA 261]
+
+Woolley, Anita, and T. Malone. “Defend Your Research: What Makes a Team Smarter? More
+Women.” Harvard Business Review (June 2011).
+Yegge, Steve. “Stevey’s Google Platform Rant.” GitHub gist. 2011.
+https://gist.github.com/jezhumble/a8b3cbb4ea20139582fa8ffc9d791fb2.
+
+[PÁGINA 262]
+
+INDEX
+A
+A/B testing, 25, 85, 140
+A3 problem solving, 191
+acceptance tests, 44, 54
+accidents, in complex systems, 30, 39
+Agile development
+innovations and, 86-87
+measuring productivity in, 12-13
+reports on current state of, 135
+Agile Manifesto, 41, 49, 75
+Allspaw, John, xxiv
+Almeida, iago, 90
+Amazon, 5
+moving to SOA, 66
+Web Services, 71, 93
+analysis of variance (ANOVA), 229
+Anita Borg Institute, 114
+anonymity, in surveys, 165
+anxiety, 89
+applications. See software architecture, 59-68
+correlated with delivery performance, 60-61, 216
+deployability and testability of, 61-62
+loosely coupled, 48, 62-65, 91, 204, 216
+making large-scale changes to, 62
+microservices, 217
+service-oriented, 63
+Asberg, Marie, 95
+automated testing. See test automation
+automation, given to computers, 109
+average variance extracted (AVE), 226
+
+[PÁGINA 263]
+
+B
+bad data, 163-165
+basic assumptions, 29-30
+Bessen, James, 4
+Bezos, Jeff, 183
+bias, 171, 224-225
+Blank, Steven, 83
+Bogaerts, David, 184
+branches
+lifetimes of, 44-45, 215
+short-lived, 56
+Brynjolfsson, Erik, 4
+bureaucracy, 35
+bureaucratic culture, 31-32, 35, 43
+burnout, 94-100
+correlated with:
+deployment pain, 97, 215
+pathological culture, 97
+measuring, 96
+negatively correlated with:
+delivery performance, 64
+effective leadership, 98, 215
+investments in DevOps, 98
+Lean management, 77, 84, 87, 217
+organizational performance, 215
+trunk-based development, 215
+Westrum organizational culture, 215
+reducing, 46, 95, 97-100, 107
+risk factors for, 95
+C
+capabilities (DevOps), 6-8, 215, 219
+driving delivery performance, 9, 201-209
+measuring, 5-6
+Capital One, 5, 72
+car manufacturing, 75
+causal analysis, 140
+causation, 136-138
+
+[PÁGINA 264]

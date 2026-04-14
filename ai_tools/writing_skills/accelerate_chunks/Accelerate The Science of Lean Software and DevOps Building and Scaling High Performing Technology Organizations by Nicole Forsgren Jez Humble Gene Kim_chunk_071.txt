@@ -1,0 +1,53 @@
+=== CHUNK 71 de 191 ===
+=== Caracteres: 2740 ===
+
+ng of the regulation (for instance, in the case of PCI
+DSS) or by auditors. However, implementing this control does not
+require the use of a CAB or separate operations team. ere are two
+
+[PÁGINA 106]
+
+mechanisms which can be effectively used to satisfy both the letter and
+the spirit of this control.
+First, when any kind of change is committed, somebody who wasn’t
+involved in authoring the change should review it either before or
+immediately following commit to version control. is can be somebody
+on the same team. is person should approve the change by recording
+their approval in a system of record such as GitHub (by approving the
+pull request) or a deployment pipeline tool (by approving a manual stage
+immediately following commit).
+Second, changes should only be applied to production using a fully
+automated process that forms part of a deployment pipeline.1 at is, no
+changes should be able to be made to production unless they have been
+committed to version control, validated by the standard build and test
+process, and then deployed through an automated process triggered
+through a deployment pipeline. As a result of implementing a
+deployment pipeline, auditors will have a complete record of which
+changes have been applied to which environments, where they come
+from in version control, what tests and validations have been run against
+them, and who approved them and when. A deployment pipeline is, thus,
+particularly valuable in the context of safety-critical or highly regulated
+industries.
+Logically, it’s clear why approval by external bodies is problematic.
+After all, software systems are complex. Every developer has made a
+seemingly innocuous change that took down part of the system. What are
+the chances that an external body, not intimately familiar with the
+internals of a system, can review tens of thousands of lines of code change
+by potentially hundreds of engineers and accurately determine the impact
+on a complex production system? is idea is a form of risk management
+
+[PÁGINA 107]
+
+theater: we check boxes so that when something goes wrong, we can say
+that at least we followed the process. At best, this process only introduces
+time delays and handoffs.
+We think that there’s a place for people outside teams to do effective
+risk management around changes. However, this is more of a governance
+role than actually inspecting changes. Such teams should be monitoring
+delivery performance and helping teams improve it by implementing
+practices that are known to increase stability, quality, and speed, such as
+the continuous delivery and Lean management practices described in this
+book.
+1 For more on deployment pipelines, see https://continuousdelivery.com/implementing/patterns/.
+
+[PÁGINA 108]

@@ -1,0 +1,42 @@
+=== CHUNK 108 de 191 ===
+=== Caracteres: 2214 ===
+
+ey work in—what countries they come from, how large
+their organizations are, the industry vertical they work in, their job titles,
+and their gender (see Chapter 10).
+EXPLORATORY ANALYSIS
+
+[PÁGINA 161]
+
+Exploratory analysis is the next level of statistical analysis. is is a broad
+categorization that looks for relationships among the data and may include
+visualizations to identify patterns in the data. Outliers may also be
+detected in this step, though the researchers have to be careful to make
+sure that outliers are, in fact, outliers, and not legitimate members of the
+group.
+Exploratory analyses are a fun and exciting part of the research process.
+For those who are divergent thinkers, this is often the stage where new
+ideas, new hypotheses, and new research projects are generated and
+proposed. Here, we discover how the variables in our data are related and
+we look for possible new connections and relationships. However, this
+should not be the end for a team that wants to make statements about
+prediction or causation.
+Many people have heard the phrase “correlation doesn’t imply
+causation,” but what does that mean? e analyses done in the exploratory
+stage include correlation but not causation. Correlation looks at how
+closely two variables move together—or don’t—but it doesn’t tell us if one
+variable’s movement predicts or causes the movement in another variable.
+Correlation analysis only tells us if two variables move in tandem or in
+opposition; it doesn’t tell us why or what is causing it. Two variables
+moving together can always be due to a third variable or, sometimes, just
+chance.
+A fantastic and fun set of examples that highlight high correlations due
+to chance can be found at the website Spurious Correlations.1 e author
+Tyler Vigen has calculated examples of highly correlated variables that
+common sense tells us are not predictive and certainly not causal. For
+example, he shows (Figure 12.1) that the per capita cheese consumption is
+highly correlated with the number of people who died by becoming tangled
+in their bedsheets (with a correlation of 94.71% or r = 0.9471; see footnote
+2 on correlations in this chapter). Surely cheese consumption doesn’t cause
+
+[PÁGINA 162]

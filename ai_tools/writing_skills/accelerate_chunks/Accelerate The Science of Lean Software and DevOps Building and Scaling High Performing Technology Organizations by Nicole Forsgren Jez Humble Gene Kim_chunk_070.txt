@@ -1,0 +1,40 @@
+=== CHUNK 70 de 191 ===
+=== Caracteres: 1934 ===
+
+proval processes on
+software delivery performance. us, we asked about four possible
+scenarios:
+1. All production changes must be approved by an external body
+(such as a manager or CAB).
+
+[PÁGINA 105]
+
+2. Only high-risk changes, such as database changes, require
+approval.
+3. We rely on peer review to manage changes.
+4. We have no change approval process.
+e results were surprising. We found that approval only for high-risk
+changes was not correlated with software delivery performance. Teams
+that reported no approval process or used peer review achieved higher
+software delivery performance. Finally, teams that required approval by an
+external body achieved lower performance.
+We investigated further the case of approval by an external body to see
+if this practice correlated with stability. We found that external approvals
+were negatively correlated with lead time, deployment frequency, and
+restore time, and had no correlation with change fail rate. In short,
+approval by an external body (such as a manager or CAB) simply doesn’t
+work to increase the stability of production systems, measured by the time
+to restore service and change fail rate. However, it certainly slows things
+down. It is, in fact, worse than having no change approval process at all.
+Our recommendation based on these results is to use a lightweight
+change approval process based on peer review, such as pair programming
+or intrateam code review, combined with a deployment pipeline to detect
+and reject bad changes. is process can be used for all kinds of changes,
+including code, infrastructure, and database changes.
+What About Segregation of Duties?
+In regulated industries, segregation of duties is often required either
+explicitly in the wording of the regulation (for instance, in the case of PCI
+DSS) or by auditors. However, implementing this control does not
+require the use of a CAB or separate operations team. ere are two
+
+[PÁGINA 106]

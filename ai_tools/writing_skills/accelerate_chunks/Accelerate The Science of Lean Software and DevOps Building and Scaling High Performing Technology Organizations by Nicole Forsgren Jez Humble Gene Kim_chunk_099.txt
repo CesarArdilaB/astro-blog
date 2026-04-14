@@ -1,0 +1,37 @@
+=== CHUNK 99 de 191 ===
+=== Caracteres: 1588 ===
+
+rs can invest in their teams:
+Ensure that existing resources are made available and accessible to
+everyone in the organization. Create space and opportunities for
+learning and improving.
+
+[PÁGINA 150]
+
+Establish a dedicated training budget and make sure people know
+about it. Also, give your staff the latitude to choose training that
+interests them. is training budget may include dedicated time
+during the day to make use of resources that already exist in the
+organization.
+Encourage staff to attend technical conferences at least once a year
+and summarize what they learned for the entire team.
+Set up internal hack days, where cross-functional teams can get
+together to work on a project.
+Encourage teams to organize internal “yak days,” where teams get
+together to work on technical debt. ese are great events because
+technical debt is so rarely prioritized.
+Hold regular internal DevOps mini-conferences. We’ve seen
+organizations achieve success using the classic DevOpsDays format,
+which combines pre-prepared talks with “open spaces” where
+participants self-organize to propose and facilitate their own
+sessions.
+Give staff dedicated time, such as 20% time or several days after a
+release, to experiment with new tools and technologies. Allocate
+budget and infrastructure for special projects.
+TIPS TO IMPROVE CULTURE AND SUPPORT
+YOUR TEAMS
+As the real value of a leader or manager is manifest in how they amplify the
+work of their teams, perhaps the most valuable work they can do is growing
+and supporting a strong organizational culture among those they serve:
+
+[PÁGINA 151]

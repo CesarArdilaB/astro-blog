@@ -1,0 +1,94 @@
+=== CHUNK 186 de 191 ===
+=== Caracteres: 2160 ===
+
+l batches in, 16, 84-88
+Lean startup, 191
+learning, 108, 187, 193, 207
+creating environment for, 195
+legacy code, xxii, 10, 23
+Lietz, Shannon, 72
+Likert-type scale, xxvi, 32-35, 133, 151
+
+[PÁGINA 274]
+
+linear regression, 228
+lines of code, optimal amount of, 12
+LinkedIn, xxv
+loosely coupled architecture, 62-65, 204
+correlated with:
+continuous delivery, 48, 62, 216
+leadership, 220
+reducing deployment pain, 91
+low performers, 18-24
+correlated with:
+change approval process, 79
+deployment frequency, 65, 216
+mainframe systems, 60, 216
+performance, 212
+software outsourcing, 60, 216
+leadership in, 119-120, 219
+not correlated with industry characteristics, 221-222
+recommending their organization, 103, 219
+time spent on:
+integration, 215
+manual work, 214
+new vs. unplanned work/rework, 52, 213
+security issues, 72, 215
+trading speed for stability, 10
+loyalty, 102-104
+correlated with organizational performance, 104, 218
+M
+mainframe systems, 8, 60, 216
+Mainstream Media Accountability Survey, 143
+managers
+addressing employees’ burnout, 95-98
+affecting organizational culture, 105-106, 122-123
+leading by example, 197
+supporting their teams, 123-127
+manifest variables, 146
+manual work, 214
+marker variable test, 224
+market share, 24, 181
+
+[PÁGINA 275]
+
+of high vs. low performers, 212
+Maslach, Christina, 95
+maturity models, 6-7
+McAfee, Andrew, 4
+mean time to restore (MTTR), 14, 17, 37
+correlated with:
+change approval process, 79
+monitoring and version control, 213
+in performance analysis, 141
+mechanistic analysis, 140
+medium performers, 18, 23
+correlated with:
+delivery performance, 212
+deployment frequency, 65, 216
+leadership in, 219
+not correlated with industry characteristics, 221-222
+time spent on:
+manual work, 214
+new vs. unplanned work/rework, 214
+menial tasks, 109
+microaggressions, 113
+microservices architecture, 217
+Microsoft
+Azure service, 93
+continuous delivery at, 90
+minimum viable product (MVP), 84
+minorities, 112, 220
+mission, 30-31
+monitoring tools, 76, 206
+correlated with MTTR, 213
+feedback from, 77
+proactive, 109, 127
+motivation
+increasing, 16
+role of leaders in, 115
+N
+Net Promoter Score (NPS), 145
+explained, 104
+
+[PÁGINA 276]

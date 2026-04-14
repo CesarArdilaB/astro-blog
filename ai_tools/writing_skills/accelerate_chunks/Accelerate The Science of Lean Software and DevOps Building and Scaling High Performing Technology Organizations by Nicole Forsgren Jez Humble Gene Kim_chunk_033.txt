@@ -1,0 +1,47 @@
+=== CHUNK 33 de 191 ===
+=== Caracteres: 1940 ===
+
+e hour Between one week and one Between one week and one
+Changes month month*
+MTTR Less than one hour Less than one day Between one day and one
+week
+Change Failure 0-15% 0-15% 31-45%
+Rate
+
+[PÁGINA 48]
+
+* Low performers were lower on average (at a statistically significant level) but had the same median as
+the medium performers.
+Astonishingly, these results demonstrate that there is no tradeoff
+between improving performance and achieving higher levels of stability
+and quality. Rather, high performers do better at all of these measures.
+is is precisely what the Agile and Lean movements predict, but much
+dogma in our industry still rests on the false assumption that moving
+faster means trading off against other performance goals, rather than
+enabling and reinforcing them.4
+Furthermore, over the last few years we’ve found that the high-
+performing cluster is pulling away from the pack. e DevOps mantra of
+continuous improvement is both exciting and real, pushing companies to
+be their best, and leaving behind those who do not improve. Clearly, what
+was state of the art three years ago is just not good enough for today’s
+business environment.
+Compared to 2016, high performers in 2017 maintained or improved
+their performance, consistently maximizing both tempo and stability. Low
+performers, on the other hand, maintained the same level of throughput
+from 2014-2016 and only started to increase in 2017—likely realizing that
+the rest of the industry was pulling away from them. In 2017, we saw low
+performers lose some ground in stability. We suspect this is due to
+attempts to increase tempo (“work harder!”) which fail to address the
+underlying obstacles to improved overall performance (for example,
+rearchitecture, process improvement, and automation). We show the
+trends in Figures 2.2 and 2.3.
+
+[PÁGINA 49]
+
+Figure 2.2: Year over Year Trends: Tempo
+
+[PÁGINA 50]
+
+Figure 2.3: Year over Year Trends: Stability
+
+[PÁGINA 51]

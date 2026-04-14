@@ -1,0 +1,62 @@
+=== CHUNK 4 de 191 ===
+=== Caracteres: 1903 ===
+
+ent
+Conclusion
+Appendix A: Capabilities to Drive Improvement
+Appendix B: e Stats
+Appendix C: Statistical Methods Used in Our Research
+Acknowledgments
+Bibliography
+Index
+About the Authors
+
+[PÁGINA 11]
+
+Figures
+2.1 Software Delivery Performance
+2.2 Year over Year Trends: Tempo
+2.3 Year over Year Trends: Stability
+2.4 Impacts of Software Delivery Performance
+3.1 Likert-Type Questions for Measuring Culture
+3.2 Westrum Organizational Culture’s Outcomes
+3.3 Westrum Organizational Culture’s Drivers
+4.1 Drivers of Continuous Delivery
+4.2 Impacts of Continuous Delivery
+4.3 Continuous Delivery Makes Work More Sustainable
+4.4 New Work vs. Unplanned Work
+5.1 Deploys per Developer per Day
+7.1 Components of Lean Management
+7.2 Impacts of Lean Management Practices
+8.1 Components of Lean Product Management
+8.2 Impacts of Lean Product Management
+9.1 Impacts of Technical and Lean Practices on Work Life
+10.1 Impacts of Technical and Lean Practices on Identity
+10.2 Impacts of Technical and Lean Practices on Job Satisfaction
+10.3 Gender Demographics in 2017 Study
+10.4 Underrepresented Minority Demographics in 2017 Study
+11.1 Impacts of Transformational Leadership on Technical and Lean
+Capabilities
+12.1 Spurious Correlation: Per Capita Cheese Consumption and
+Strangulation by Bedsheets
+16.1 Leadership Obeya (360-Degree Panorama)
+
+[PÁGINA 12]
+
+16.2 ING’s New Agile Organizational Model Has No Fixed Structure—It
+Constantly Evolves
+16.3 Stand-up and Catchball Rhythm
+16.4 High-Performance Team, Management, and Leadership Behaviors
+and Practices
+A.1 Overall Research Program
+B.1 Firmographics: Organization Size, Industry, Number of Servers in
+2017
+Tables
+2.1 Design vs. Delivery
+2.2 Software Delivery Performance for 2016
+2.3 Software Delivery Performance for 2017
+3.1 Westrum’s Typology of Organizational Culture
+13.1 Westrum’s Typology of Organizational Culture
+B.1 Manual Work Percentages
+
+[PÁGINA 13]

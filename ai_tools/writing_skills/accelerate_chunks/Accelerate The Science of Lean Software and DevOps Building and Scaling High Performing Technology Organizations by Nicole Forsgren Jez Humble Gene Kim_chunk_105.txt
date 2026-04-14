@@ -1,0 +1,34 @@
+=== CHUNK 105 de 191 ===
+=== Caracteres: 1654 ===
+
+ve and can allow for more insights and
+emergent behavior to be discovered by researchers, particularly in complex
+or new areas. However, it is often more difficult and costly to analyze;
+
+[PÁGINA 158]
+
+efforts to analyze qualitative data using automated means often codify the
+data into a numerical format, making it quantitative.
+Quantitative research is any kind of research with data that includes
+numbers. ese can include system data (in numerical format) or stock
+data. System data is any data generated from our tools; one example is log
+data. It can also include survey data, if the survey asks questions that
+capture responses in numerical format—preferably on a scale. e research
+presented in this book is quantitative, because it was collected using a
+Likert-type survey instrument.
+What Is a Likert-Type Scale?
+A Likert-type scale records responses and assigns them a number value.
+For example, “Strongly disagree” would be given a value of 1, neutral a
+value of 4, and “Strongly agree” a value of 7. is provides a consistent
+approach to measurement across all research subjects, and provides a
+numerical base for researchers to use in their analysis.
+TYPES OF ANALYSIS
+Quantitative research allows us to do statistical data analysis. According to
+a framework presented by Dr. Jeffrey Leek at Johns Hopkins Bloomberg
+School of Public Health (Leek 2013), there are six types of data analysis
+(given below in the order of increasing complexity). is complexity is due
+to the knowledge required by the data scientist, the costs involved in the
+analysis, and the time required to perform the analysis. ese levels of
+analysis are:
+
+[PÁGINA 159]

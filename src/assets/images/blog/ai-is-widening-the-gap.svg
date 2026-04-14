@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.8" fill="#333333" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="#ff4500"/>
+
+  <!-- Transmission label -->
+  <text x="60" y="80" font-family="monospace" font-size="13" fill="#ff4500" letter-spacing="4">TRANSMISSION_004</text>
+  <text x="60" y="110" font-family="monospace" font-size="11" fill="#555555" letter-spacing="2">2026.04.13 /// THE GAP</text>
+
+  <!-- Two diverging performance lines -->
+  <!-- Elite team line (going up) -->
+  <polyline points="200,420 300,400 400,370 500,320 600,260 700,200 800,140 900,90 1000,50"
+    stroke="#ff4500" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Glow effect -->
+  <polyline points="200,420 300,400 400,370 500,320 600,260 700,200 800,140 900,90 1000,50"
+    stroke="#ff4500" stroke-width="8" fill="none" opacity="0.15" stroke-linecap="round"/>
+
+  <!-- Average team line (flat/declining) -->
+  <polyline points="200,420 300,425 400,430 500,440 600,445 700,450 800,460 900,465 1000,470"
+    stroke="#333333" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="6 4"/>
+
+  <!-- Labels for lines -->
+  <text x="1010" y="55" font-family="monospace" font-size="10" fill="#ff4500" letter-spacing="2">ELITE</text>
+  <text x="1010" y="475" font-family="monospace" font-size="10" fill="#444444" letter-spacing="2">AVERAGE</text>
+
+  <!-- Gap indicator -->
+  <line x1="750" y1="185" x2="750" y2="455" stroke="#ff4500" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+  <text x="760" y="330" font-family="monospace" font-size="11" fill="#ff4500" letter-spacing="2" opacity="0.7">5x GAP</text>
+
+  <!-- Starting point marker -->
+  <circle cx="200" cy="420" r="6" fill="#ff4500"/>
+  <circle cx="200" cy="420" r="12" fill="#ff4500" opacity="0.15"/>
+  <text x="130" y="445" font-family="monospace" font-size="9" fill="#555555" letter-spacing="1">AI ADOPTION</text>
+
+  <!-- Foundation blocks at bottom -->
+  <rect x="200" y="510" width="120" height="30" rx="2" fill="none" stroke="#ff4500" stroke-width="1" opacity="0.6"/>
+  <text x="215" y="530" font-family="monospace" font-size="9" fill="#ff4500" letter-spacing="1" opacity="0.8">DEVOPS</text>
+
+  <rect x="340" y="510" width="120" height="30" rx="2" fill="none" stroke="#ff4500" stroke-width="1" opacity="0.4"/>
+  <text x="365" y="530" font-family="monospace" font-size="9" fill="#ff4500" letter-spacing="1" opacity="0.6">SPECS</text>
+
+  <rect x="480" y="510" width="120" height="30" rx="2" fill="none" stroke="#ff4500" stroke-width="1" opacity="0.4"/>
+  <text x="510" y="530" font-family="monospace" font-size="9" fill="#ff4500" letter-spacing="1" opacity="0.6">TDD</text>
+
+  <rect x="620" y="510" width="120" height="30" rx="2" fill="none" stroke="#ff4500" stroke-width="1" opacity="0.4"/>
+  <text x="638" y="530" font-family="monospace" font-size="9" fill="#ff4500" letter-spacing="1" opacity="0.6">CULTURE</text>
+
+  <!-- Bottom status bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#0a0a0a"/>
+  <rect x="0" y="590" width="1200" height="1" fill="#333333"/>
+  <text x="30" y="615" font-family="monospace" font-size="11" fill="#555555" letter-spacing="2">STATUS: THE_WINDOW_IS_CLOSING</text>
+  <text x="1170" y="615" font-family="monospace" font-size="11" fill="#333333" text-anchor="end">cesar.ships</text>
+</svg>

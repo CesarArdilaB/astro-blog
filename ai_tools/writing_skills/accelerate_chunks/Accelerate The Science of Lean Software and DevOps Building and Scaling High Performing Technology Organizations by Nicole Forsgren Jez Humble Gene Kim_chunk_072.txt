@@ -1,0 +1,36 @@
+=== CHUNK 72 de 191 ===
+=== Caracteres: 1718 ===
+
+peed, such as
+the continuous delivery and Lean management practices described in this
+book.
+1 For more on deployment pipelines, see https://continuousdelivery.com/implementing/patterns/.
+
+[PÁGINA 108]
+
+CHAPTER 8
+PRODUCT DEVELOPMENT
+T
+he Agile brand has more or less won the methodology wars. However,
+much of what has been implemented is faux Agile—people following some
+of the common practices while failing to address wider organizational
+culture and processes. For example, in larger companies it’s still common to
+see months spent on budgeting, analysis, and requirements-gathering
+before work starts; to see work batched into big projects with infrequent
+releases; and for customer feedback to be treated as an afterthought. In
+contrast, both Lean product development and the Lean startup movement
+emphasize testing your product’s design and business model by performing
+user research frequently, from the very beginning of the product lifecycle.
+Eric Ries’ book e Lean Startup (Ries 2011) created a surge of interest
+in lightweight approaches to exploring new business models and product
+ideas in conditions of uncertainty. Ries’ work is a synthesis of ideas from
+the Lean movement, design thinking, and the work of entrepreneur Steve
+Blank (Blank 2013), which emphasizes the importance of taking an
+experimental approach to product development. is approach, based on
+our research, includes building and validating prototypes from the
+beginning, working in small batches, and evolving or “pivoting” products
+and the business models behind them early and often.
+We wanted to test whether these practices have a direct impact on
+organizational performance, measured in terms of productivity, market
+
+[PÁGINA 109]
