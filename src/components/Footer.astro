@@ -1,5 +1,4 @@
 ---
-const BREVO_API_KEY = import.meta.env.PUBLIC_BREVO_API_KEY || '';
 ---
 
 <footer class="col-span-1 md:col-span-12 bg-brand-dark border-t border-brand-border font-mono text-xs md:text-sm text-gray-500">
@@ -49,15 +48,15 @@ const BREVO_API_KEY = import.meta.env.PUBLIC_BREVO_API_KEY || '';
 	</div>
 </footer>
 
-<script define:vars={{ BREVO_API_KEY }}>
+<script is:inline>
 	document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
 		e.preventDefault();
-		const form = e.target;
-		const msg = document.getElementById('newsletter-msg');
-		const email = form.email.value;
-		const btn = form.querySelector('button');
+		var form = e.target;
+		var msg = document.getElementById('newsletter-msg');
+		var email = form.email.value;
+		var btn = form.querySelector('button');
 
-		const trimmedEmail = email.trim();
+		var trimmedEmail = email.trim();
 		if (!trimmedEmail || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(trimmedEmail)) {
 			msg.textContent = '/// INVALID EMAIL FORMAT.';
 			msg.className = 'mt-3 text-xs tracking-wide text-red-500';
@@ -69,32 +68,23 @@ const BREVO_API_KEY = import.meta.env.PUBLIC_BREVO_API_KEY || '';
 		btn.classList.add('opacity-50', 'cursor-not-allowed');
 
 		try {
-			const res = await fetch('https://api.brevo.com/v3/contacts', {
+			var res = await fetch('/api/subscribe', {
 				method: 'POST',
-				headers: {
-					'api-key': BREVO_API_KEY,
-					'Content-Type': 'application/json',
-					'Accept': 'application/json',
-				},
-				body: JSON.stringify({
-					email: trimmedEmail,
-					listIds: [2],
-					updateEnabled: true,
-				}),
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ email: trimmedEmail }),
 			});
 
-			if (res.ok || res.status === 204) {
+			var data = await res.json();
+
+			if (data.ok) {
 				msg.textContent = '/// TRANSMISSION RECEIVED. YOU\'RE IN.';
 				msg.className = 'mt-3 text-xs tracking-wide text-green-500';
 				form.reset();
+			} else if (data.duplicate) {
+				msg.textContent = '/// ALREADY SUBSCRIBED. STANDING BY.';
+				msg.className = 'mt-3 text-xs tracking-wide text-brand-accent';
 			} else {
-				const data = await res.json().catch(() => ({}));
-				if (data.code === 'duplicate_parameter') {
-					msg.textContent = '/// ALREADY SUBSCRIBED. STANDING BY.';
-					msg.className = 'mt-3 text-xs tracking-wide text-brand-accent';
-				} else {
-					throw new Error(data.message || 'Subscription failed');
-				}
+				throw new Error(data.error || 'Subscription failed');
 			}
 		} catch (err) {
 			msg.textContent = '/// ERROR: SUBSCRIPTION FAILED. PLEASE TRY AGAIN.';

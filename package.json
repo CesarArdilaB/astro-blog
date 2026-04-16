@@ -12,6 +12,7 @@
     "check": "biome check ."
   },
   "dependencies": {
+    "@astrojs/vercel": "^8.2.11",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.4",

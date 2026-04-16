@@ -1,8 +1,7 @@
 ---
+export const prerender = true;
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
-
-const BREVO_API_KEY = import.meta.env.PUBLIC_BREVO_API_KEY || '';
 ---
 
 <Layout
@@ -104,13 +103,7 @@ const BREVO_API_KEY = import.meta.env.PUBLIC_BREVO_API_KEY || '';
 	</main>
 </Layout>
 
-<script define:vars={{ BREVO_API_KEY }}>
-	function sanitize(str) {
-		var el = document.createElement('div');
-		el.textContent = str;
-		return el.innerHTML;
-	}
-
+<script is:inline>
 	document.getElementById('contact-form').addEventListener('submit', async (e) => {
 		e.preventDefault();
 		var form = e.target;
@@ -139,60 +132,20 @@ const BREVO_API_KEY = import.meta.env.PUBLIC_BREVO_API_KEY || '';
 		btn.classList.add('opacity-50', 'cursor-not-allowed');
 
 		try {
-			var safeName = sanitize(name);
-			var safeEmail = sanitize(email);
-			var safeSubject = sanitize(subject);
-			var safeMessage = sanitize(message).replace(/\n/g, '<br>');
-
-			// Add contact to Brevo list #1 (contact form)
-			await fetch('https://api.brevo.com/v3/contacts', {
+			var res = await fetch('/api/contact', {
 				method: 'POST',
-				headers: {
-					'api-key': BREVO_API_KEY,
-					'Content-Type': 'application/json',
-					'Accept': 'application/json',
-				},
-				body: JSON.stringify({
-					email: email,
-					listIds: [1],
-					updateEnabled: true,
-					attributes: { FIRSTNAME: name },
-				}),
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ name, email, subject, message }),
 			});
 
-			// Send transactional email
-			var res = await fetch('https://api.brevo.com/v3/smtp/email', {
-				method: 'POST',
-				headers: {
-					'api-key': BREVO_API_KEY,
-					'Content-Type': 'application/json',
-					'Accept': 'application/json',
-				},
-				body: JSON.stringify({
-					sender: {
-						name: 'cesar.ships Contact Form',
-						email: 'cesar.ardila@gmail.com',
-					},
-					to: [{
-						email: 'cesar.ardila@gmail.com',
-						name: 'Cesar Ardila',
-					}],
-					replyTo: { email: email, name: name },
-					subject: '[cesar.ships] ' + subject,
-					htmlContent: '<h2>New transmission from ' + safeName + '</h2>' +
-						'<p><strong>From:</strong> ' + safeName + ' (' + safeEmail + ')</p>' +
-						'<p><strong>Subject:</strong> ' + safeSubject + '</p>' +
-						'<hr>' +
-						'<p>' + safeMessage + '</p>',
-				}),
-			});
+			var data = await res.json();
 
-			if (res.ok) {
+			if (data.ok) {
 				msg.textContent = '/// TRANSMISSION SENT SUCCESSFULLY. I\'LL GET BACK TO YOU.';
 				msg.className = 'mt-6 text-sm font-mono tracking-wide text-green-500';
 				form.reset();
 			} else {
-				throw new Error('Failed to send');
+				throw new Error(data.error || 'Failed to send');
 			}
 		} catch (err) {
 			msg.textContent = '/// ERROR: TRANSMISSION FAILED. PLEASE TRY AGAIN.';
