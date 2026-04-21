@@ -5,6 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('post');
@@ -36,9 +37,12 @@ const ogImage = post.data.ogImage || undefined;
 		<!-- Article Header -->
 		<header class="border-b border-brand-border p-6 md:p-12">
 			<div class="max-w-4xl mx-auto">
-				<a href="/" class="inline-block mb-8 font-mono text-sm text-gray-500 hover:text-brand-accent transition-colors">
-					<span class="mr-2">←</span> RETURN_TO_BASE
-				</a>
+				<div class="flex items-center justify-between mb-8">
+					<a href="/" class="font-mono text-sm text-gray-500 hover:text-brand-accent transition-colors">
+						<span class="mr-2">&larr;</span> RETURN_TO_BASE
+					</a>
+					<LanguageSwitcher />
+				</div>
 				
 				<div class="mb-6 flex flex-wrap gap-2 text-sm font-mono font-bold uppercase tracking-tight">
 					<time datetime={post.data.publishDate?.toISOString()} class="bg-brand-accent text-brand-dark px-2 py-0.5">
