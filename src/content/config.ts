@@ -64,6 +64,26 @@ const postCollection = defineCollection({
   }),
 });
 
+const postEsCollection = defineCollection({
+  schema: ({ image }) => z.object({
+    publishDate: z.date().optional(),
+    updateDate: z.date().optional(),
+    draft: z.boolean().optional(),
+
+    title: z.string(),
+    excerpt: z.string().optional(),
+    image: image().optional(),
+    ogImage: z.string().optional(),
+
+    category: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    author: z.string().optional(),
+
+    metadata: metadataDefinition(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  'post-es': postEsCollection,
 };

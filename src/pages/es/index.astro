@@ -1,14 +1,13 @@
 ---
 export const prerender = true;
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import PostCard from '../components/PostCard.astro';
-import Footer from '../components/Footer.astro';
-import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import PostCard from '../../components/PostCard.astro';
+import Footer from '../../components/Footer.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 
-const posts = await getCollection('post');
+const posts = await getCollection('post-es');
 const _sortedPosts = posts.sort((a, b) => {
-	// Handle cases where publishDate might be undefined, though schema says optional, let's be safe
 	const dateA = a.data.publishDate ? new Date(a.data.publishDate).getTime() : 0;
 	const dateB = b.data.publishDate ? new Date(b.data.publishDate).getTime() : 0;
 	return dateB - dateA;
@@ -16,12 +15,11 @@ const _sortedPosts = posts.sort((a, b) => {
 ---
 
 <Layout
-	description="Product Engineer, Digital Artisan & Strategist. 25 years of shipping value. Code is a cost, value is the product."
+	description="Ingeniero de Producto, Artesano Digital y Estratega. 25 anos enviando valor. El codigo es un costo, el valor es el producto."
 >
 	<main class="min-h-screen grid grid-cols-1 md:grid-cols-12 gap-px bg-brand-border border border-brand-border">
-		
+
 		<!-- Section 1: Header / Hero -->
-		<!-- Logo -->
 		<div class="col-span-1 md:col-span-3 bg-brand-dark text-brand-light p-6 flex items-center justify-between group border-b md:border-b-0 border-brand-border">
 			<img src="/logo_barras.png" alt="cesar.ships Logo" class="h-12 w-auto" />
 			<div class="flex items-center gap-3">
@@ -33,7 +31,7 @@ const _sortedPosts = posts.sort((a, b) => {
 		<!-- Marquee -->
 		<div class="col-span-1 md:col-span-9 bg-brand-dark flex items-center overflow-hidden relative border-l-0 md:border-l border-brand-border">
 			<div class="animate-marquee whitespace-nowrap font-mono text-xs md:text-sm tracking-widest text-brand-light/80 py-6">
-				FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT /// FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT /// FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT ///
+				LA FORMA SIGUE LA FUNCION /// ENVIANDO VALOR /// SIN EXCESOS /// LA FORMA SIGUE LA FUNCION /// ENVIANDO VALOR /// SIN EXCESOS /// LA FORMA SIGUE LA FUNCION /// ENVIANDO VALOR /// SIN EXCESOS ///
 			</div>
 			<div class="absolute top-0 right-0 h-full w-24 bg-linear-to-l from-brand-dark to-transparent z-10"></div>
 			<div class="absolute top-0 left-0 h-full w-24 bg-linear-to-r from-brand-dark to-transparent z-10"></div>
@@ -41,15 +39,14 @@ const _sortedPosts = posts.sort((a, b) => {
 
 		<!-- Hero Headline -->
 		<div class="col-span-1 md:col-span-12 bg-brand-dark text-brand-light p-12 md:p-24 flex flex-col justify-center border-t border-brand-border relative overflow-hidden">
-			<h1 class="font-mono text-5xl md:text-8xl font-bold tracking-tighter leading-none glitch-text mb-4" data-text="PRODUCT BUILDER.">
-				PRODUCT ENGINEER.
+			<h1 class="font-mono text-5xl md:text-8xl font-bold tracking-tighter leading-none glitch-text mb-4" data-text="INGENIERO DE PRODUCTO.">
+				INGENIERO DE PRODUCTO.
 			</h1>
 			<p class="font-sans text-xl md:text-2xl text-gray-400 max-w-2xl">
-				Digital Artisan & Strategist. <span class="text-brand-accent">25 Years of Shipping.</span>
+				Artesano Digital y Estratega. <span class="text-brand-accent">25 Anos Enviando.</span>
 			</p>
-			
-			<!-- Decorative grid background element -->
-			<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none" 
+
+			<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none"
 				style="background-image: radial-gradient(#333 1px, transparent 1px); background-size: 20px 20px;">
 			</div>
 		</div>
@@ -57,8 +54,8 @@ const _sortedPosts = posts.sort((a, b) => {
 		<!-- Section 2: The Manifesto -->
 		<div class="col-span-1 md:col-span-12 bg-brand-dark p-12 md:p-32 border-t border-brand-border flex items-center justify-center text-center">
 			<h2 class="font-sans font-bold text-4xl md:text-7xl uppercase tracking-tight leading-tight max-w-5xl">
-				Code is a <span class="text-gray-500 line-through decoration-brand-accent decoration-4">cost</span>. <br/>
-				Value is the <span class="text-brand-light border-b-4 border-brand-accent">product</span>.
+				El codigo es un <span class="text-gray-500 line-through decoration-brand-accent decoration-4">costo</span>. <br/>
+				El valor es el <span class="text-brand-light border-b-4 border-brand-accent">producto</span>.
 			</h2>
 		</div>
 
@@ -66,24 +63,19 @@ const _sortedPosts = posts.sort((a, b) => {
 		<div class="col-span-1 md:col-span-12 bg-brand-dark border-t border-brand-border grid grid-cols-1 md:grid-cols-3 gap-px">
 			<div class="col-span-1 md:col-span-3 bg-brand-dark p-6 border-b border-brand-border flex items-center gap-4">
 				<div class="w-3 h-3 bg-brand-accent"></div>
-				<h3 class="font-mono text-lg tracking-widest">TRANSMISSIONS_LOG</h3>
+				<h3 class="font-mono text-lg tracking-widest">REGISTRO_DE_TRANSMISIONES</h3>
 			</div>
 
 			{_sortedPosts.map((post) => (
-				<PostCard post={post} />
+				<PostCard post={post} lang="es" />
 			))}
-			
-			<!-- Fillers to maintain grid if needed, or leave empty space. For now, just rendering posts. -->
 		</div>
 
-		<!-- Section 4: Footer -->
 		<Footer />
-
 	</main>
 </Layout>
 
 <style>
-	/* Marquee Animation */
 	@keyframes marquee {
 		0% { transform: translateX(0); }
 		100% { transform: translateX(-50%); }
@@ -93,11 +85,10 @@ const _sortedPosts = posts.sort((a, b) => {
 		animation: marquee 20s linear infinite;
 	}
 
-	/* Glitch Effect */
 	.glitch-text {
 		position: relative;
 	}
-	
+
 	.glitch-text::before,
 	.glitch-text::after {
 		content: attr(data-text);

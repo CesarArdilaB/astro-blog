@@ -1,0 +1,29 @@
+---
+import { languages, getLangFromUrl } from '../i18n/translations';
+
+const currentLang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+
+function getTargetPath(lang: string) {
+  if (lang === 'en') {
+    return currentPath.replace(/^\/es/, '') || '/';
+  }
+  if (currentPath.startsWith('/es')) return currentPath;
+  return `/es${currentPath}`;
+}
+---
+
+<div class="flex gap-1 font-mono text-xs tracking-widest">
+  {Object.entries(languages).map(([lang, label]) => (
+    <a
+      href={getTargetPath(lang)}
+      class={`px-2 py-1 transition-colors ${
+        lang === currentLang
+          ? 'bg-brand-accent text-brand-dark font-bold'
+          : 'text-gray-500 hover:text-brand-accent'
+      }`}
+    >
+      {label}
+    </a>
+  ))}
+</div>
