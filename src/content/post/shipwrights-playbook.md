@@ -13,7 +13,7 @@ author: Cesar Ardila
 
 Your company has shipped an AI pilot. It hasn't shipped an AI product.
 
-That's not a dig. It's what the numbers say.
+You already know that. Here's what you might not: the gap is getting *wider*, not narrower, and more tooling is making it worse.
 
 ## The Gap Nobody Wants to Name
 
@@ -21,7 +21,7 @@ That's not a dig. It's what the numbers say.
 
 The story those numbers tell isn't that AI coding tools don't work. They do. Senior engineers report genuine productivity gains, some teams ship migrations in days that used to take weeks, and <a href="https://rakuten.today/blog/rakuten-accelerates-development-with-claude-code%EF%BF%BC.html" target="_blank" rel="noopener noreferrer">Rakuten is running multi-hour autonomous refactors at 99.9% numerical accuracy</a> with Claude Code.
 
-The story is that most companies are stuck in a gap. Building works. Shipping doesn't.
+The story is that most companies are stuck in a gap. Building works. Shipping doesn't. And the engineering leaders responsible feel it: the creeping suspicion that their teams are busier than ever and less effective than before. That shouldn't be how this technology plays out.
 
 <a href="https://zed.dev/blog/ai-70-problem-addy-osmani" target="_blank" rel="noopener noreferrer">Addy Osmani, Google's Chrome DX lead, gave the gap its name</a>: **the 70% problem**. AI can produce the first 70% of an app in an afternoon. The last 30% (authentication, permissions, error handling, observability, security posture, compliance, edge cases, scale) is where most AI-built products go to die. <a href="https://simonwillison.net/2025/Mar/6/vibe-coding/" target="_blank" rel="noopener noreferrer">Simon Willison put it more bluntly</a>: "Vibe coding your way to a production codebase is clearly a terrible idea."
 
@@ -31,7 +31,7 @@ So why are so many companies still trying?
 
 Walk into most enterprise AI initiatives today and you'll see the same pattern. Every team has its own experiment. One squad is evaluating Cursor. Another is on Claude Code. A third has a proof of concept on Lovable that's been "almost ready to ship" for four months. Security is building a separate review workflow. Compliance is drafting a policy no one has read. Everyone is busy. Nothing ships.
 
-This is what fragmentation looks like, and it's the most expensive AI strategy a company can run. Each team reinvents the same guardrails from scratch. Each pilot generates its own technical debt. Each security review starts from zero. The productivity gains from AI-assisted coding are real, but they evaporate against the cost of forty isolated efforts pulling in forty different directions.
+This is what fragmentation looks like. It's the default AI strategy at most companies, and it's the most expensive one they can run. Each team reinvents the same guardrails from scratch. Each pilot generates its own technical debt. Each security review starts from zero. The productivity gains from AI-assisted coding are real, but they evaporate against the cost of forty isolated efforts pulling in forty different directions.
 
 The companies that are actually shipping AI products are doing something different. They're building systems.
 
@@ -50,8 +50,6 @@ The bridging layer is where AI code becomes shippable product. It includes four 
 3. **Review and testing infrastructure.** AI code review tools (CodeRabbit, Greptile), AI test generation (QA Wolf, Meticulous), AI observability (Resolve AI). These aren't optional anymore. <a href="https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025" target="_blank" rel="noopener noreferrer">Faros AI's 2026 telemetry across 22,000 developers</a> found that incidents per pull request jumped 242.7% and 31% of PRs now merge with zero human review. The bridging layer is what catches that.
 
 4. **A sandbox path to production.** A documented, repeatable pipeline from prototype to production that includes security review, load testing, and rollback procedures. The <a href="https://awesomeagents.ai/news/amazon-kiro-ai-aws-outages/" target="_blank" rel="noopener noreferrer">Amazon Kiro outage in December 2025</a>, a 13-hour AWS failure caused by an AI agent deleting and recreating a production environment, happened because that path didn't exist.
-
-A centralized platform isn't bureaucracy. It's leverage. It means every team gets the same quality floor, the same security posture, the same observability, without having to build any of it themselves.
 
 ## Pillar Two: Review, Observability, and Ownership
 
@@ -89,7 +87,7 @@ Start tracking features in production, time from prototype to first real user, i
 
 <a href="https://www.gitclear.com/ai_assistant_code_quality_2025_research" target="_blank" rel="noopener noreferrer">GitClear's analysis of 211 million lines</a> showed that copy-pasted code rose from 8.3% to 12.3% from 2021 to 2024, and refactoring activity fell below 10% of changes. That's the signature of code velocity outpacing code quality. You can't see it in vanity metrics. You see it in maintenance cost six months later.
 
-A company serious about AI product building measures the trip from idea to shipped product, not the trip from prompt to first draft. Those are two completely different things, and confusing them is exactly how companies end up with forty abandoned prototypes and zero shipped products.
+Measure the trip from idea to shipped product, not from prompt to first draft. Confusing those two trips is how you end up with forty prototypes and zero products.
 
 ## The Shipwright Frame
 
@@ -103,7 +101,7 @@ For companies building AI-powered products in 2026, the work isn't choosing betw
 
 The companies building that system are shipping. The ones still running forty disconnected pilots are busy, expensive, and stuck.
 
-Your move.
+Pick one pillar. Staff it this quarter. Measure it next quarter. That's the move.
 
 ---
 

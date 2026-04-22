@@ -13,7 +13,7 @@ author: Cesar Ardila
 
 Tu empresa lanzó un piloto de IA. No ha lanzado un producto de IA.
 
-No es una crítica. Es lo que dicen los números.
+Eso ya lo sabes. Lo que quizás no: la brecha se está *ampliando*, no cerrando, y más herramientas la están empeorando.
 
 ## La Brecha que Nadie Quiere Nombrar
 
@@ -21,7 +21,7 @@ No es una crítica. Es lo que dicen los números.
 
 La historia que cuentan esos números no es que las herramientas de AI coding no funcionan. Sí funcionan. Ingenieros senior reportan ganancias genuinas de productividad, algunos equipos entregan migraciones en días que antes tomaban semanas, y <a href="https://rakuten.today/blog/rakuten-accelerates-development-with-claude-code%EF%BF%BC.html" target="_blank" rel="noopener noreferrer">Rakuten está ejecutando refactors autónomos de varias horas con 99.9% de precisión numérica</a> usando Claude Code.
 
-La historia es que la mayoría de las empresas están atrapadas en una brecha. Construir funciona. Entregar no.
+La historia es que la mayoría de las empresas están atrapadas en una brecha. Construir funciona. Entregar no. Y los líderes de ingeniería responsables lo sienten: la sospecha creciente de que sus equipos están más ocupados que nunca y son menos efectivos que antes. No debería ser así con esta tecnología.
 
 <a href="https://zed.dev/blog/ai-70-problem-addy-osmani" target="_blank" rel="noopener noreferrer">Addy Osmani, líder de Chrome DX en Google, le puso nombre a la brecha</a>: **el problema del 70%**. La IA puede producir el primer 70% de una aplicación en una tarde. El último 30% (autenticación, permisos, manejo de errores, observabilidad, postura de seguridad, cumplimiento, casos borde, escala) es donde la mayoría de los productos construidos con IA van a morir. <a href="https://simonwillison.net/2025/Mar/6/vibe-coding/" target="_blank" rel="noopener noreferrer">Simon Willison lo dijo más directamente</a>: "Hacer vibe coding hasta tener un codebase en producción es claramente una idea terrible."
 
@@ -31,7 +31,7 @@ Entonces, ¿por qué tantas empresas siguen intentándolo?
 
 Entra hoy a la mayoría de iniciativas empresariales de IA y verás el mismo patrón. Cada equipo tiene su propio experimento. Un squad está evaluando Cursor. Otro está en Claude Code. Un tercero tiene una prueba de concepto en Lovable que lleva cuatro meses "casi lista para lanzar". Seguridad está construyendo un flujo de revisión separado. Compliance está redactando una política que nadie ha leído. Todos están ocupados. Nada sale a producción.
 
-Así se ve la fragmentación, y es la estrategia de IA más costosa que una empresa puede ejecutar. Cada equipo reinventa las mismas protecciones desde cero. Cada piloto genera su propia deuda técnica. Cada revisión de seguridad arranca de cero. Las ganancias de productividad del AI-assisted coding son reales, pero se evaporan contra el costo de cuarenta esfuerzos aislados tirando en cuarenta direcciones diferentes.
+Así se ve la fragmentación. Es la estrategia de IA por defecto en la mayoría de las empresas, y es la más costosa que pueden ejecutar. Cada equipo reinventa las mismas protecciones desde cero. Cada piloto genera su propia deuda técnica. Cada revisión de seguridad arranca de cero. Las ganancias de productividad del AI-assisted coding son reales, pero se evaporan contra el costo de cuarenta esfuerzos aislados tirando en cuarenta direcciones diferentes.
 
 Las empresas que realmente están lanzando productos de IA están haciendo algo diferente. Están construyendo sistemas.
 
@@ -50,8 +50,6 @@ La capa puente es donde el código de IA se convierte en producto lanzable. Incl
 3. **Infraestructura de revisión y testing.** Herramientas de AI code review (CodeRabbit, Greptile), generación de tests con IA (QA Wolf, Meticulous), observabilidad con IA (Resolve AI). Esto ya no es opcional. <a href="https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025" target="_blank" rel="noopener noreferrer">La telemetría 2026 de Faros AI sobre 22,000 developers</a> encontró que los incidentes por pull request aumentaron un 242.7% y el 31% de los PRs ahora se mergean sin ninguna revisión humana. La capa puente es lo que atrapa eso.
 
 4. **Un camino de sandbox a producción.** Un pipeline documentado y repetible desde prototipo hasta producción que incluya revisión de seguridad, pruebas de carga y procedimientos de rollback. <a href="https://awesomeagents.ai/news/amazon-kiro-ai-aws-outages/" target="_blank" rel="noopener noreferrer">La caída de Amazon Kiro en diciembre de 2025</a>, una falla de 13 horas en AWS causada por un agente de IA que eliminó y recreó un ambiente de producción, sucedió porque ese camino no existía.
-
-Una plataforma centralizada no es burocracia. Es apalancamiento. Significa que cada equipo obtiene el mismo piso de calidad, la misma postura de seguridad, la misma observabilidad, sin tener que construir nada de eso por su cuenta.
 
 ## Pilar Dos: Revisión, Observabilidad y Ownership
 
@@ -89,7 +87,7 @@ Empieza a rastrear features en producción, tiempo desde prototipo hasta el prim
 
 <a href="https://www.gitclear.com/ai_assistant_code_quality_2025_research" target="_blank" rel="noopener noreferrer">El análisis de GitClear sobre 211 millones de líneas</a> mostró que el código copiado y pegado subió del 8.3% al 12.3% entre 2021 y 2024, y la actividad de refactoring cayó por debajo del 10% de los cambios. Esa es la firma de la velocidad de código superando a la calidad del código. No puedes verlo en métricas de vanidad. Lo ves en el costo de mantenimiento seis meses después.
 
-Una empresa seria sobre construir productos con IA mide el viaje desde la idea hasta el producto lanzado, no el viaje desde el prompt hasta el primer borrador. Son dos cosas completamente diferentes, y confundirlas es exactamente cómo las empresas terminan con cuarenta prototipos abandonados y cero productos lanzados.
+Mide el viaje desde la idea hasta el producto lanzado, no desde el prompt hasta el primer borrador. Confundir esos dos viajes es como terminas con cuarenta prototipos y cero productos.
 
 ## El Marco del Constructor de Barcos
 
@@ -103,7 +101,7 @@ Para las empresas que construyen productos con IA en 2026, el trabajo no es eleg
 
 Las empresas que construyen ese sistema están lanzando productos. Las que siguen corriendo cuarenta pilotos desconectados están ocupadas, gastan mucho y están estancadas.
 
-Tu turno.
+Elige un pilar. Asignale recursos este trimestre. Midelo el siguiente. Ese es el movimiento.
 
 ---
 
