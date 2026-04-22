@@ -1,14 +1,21 @@
 ---
 import { languages, getLangFromUrl } from '../i18n/translations';
+import { getAlternatePostUrl } from '../i18n/slugMap';
 
 const currentLang = getLangFromUrl(Astro.url);
 const currentPath = Astro.url.pathname;
+const alternatePostUrl = getAlternatePostUrl(currentPath);
 
 function getTargetPath(lang: string) {
+  if (lang === currentLang) return currentPath;
+
+  // For post pages, use the slug map
+  if (alternatePostUrl) return alternatePostUrl;
+
+  // For other pages, toggle /es prefix
   if (lang === 'en') {
     return currentPath.replace(/^\/es/, '') || '/';
   }
-  if (currentPath.startsWith('/es')) return currentPath;
   return `/es${currentPath}`;
 }
 ---
