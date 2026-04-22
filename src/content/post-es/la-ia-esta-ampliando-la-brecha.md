@@ -122,7 +122,7 @@ La mayoría de los equipos aún no ven la brecha porque el output se ve bien. Lo
 
 La ventana para cerrarla está abierta. No va a quedarse así.
 
-Si quieres ver cómo se ve esto a nivel individual, escribí sobre cómo los desarrolladores pueden hacer esta transición por sí mismos: <a href="/post/from-full-stack-developer-to-full-stack-product-engineer/" target="_blank" rel="noopener noreferrer">From Full-Stack Developer to Full-Stack Product Engineer</a>.
+Si quieres ver cómo se ve esto a nivel individual, escribí sobre cómo los desarrolladores pueden hacer esta transición por sí mismos: <a href="/es/post/de-desarrollador-full-stack-a-ingeniero-de-producto/" target="_blank" rel="noopener noreferrer">De Desarrollador Full-Stack a Ingeniero de Producto Full-Stack</a>.
 
 ---
 
