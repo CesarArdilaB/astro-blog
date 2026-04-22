@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.8" fill="#333333" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="#ff4500"/>
+
+  <!-- Transmission label -->
+  <text x="60" y="80" font-family="monospace" font-size="13" fill="#ff4500" letter-spacing="4">TRANSMISSION_005</text>
+  <text x="60" y="110" font-family="monospace" font-size="11" fill="#555555" letter-spacing="2">2026.04.21 /// SYSTEMS</text>
+
+  <!-- Ship hull outline (the shipwright metaphor) -->
+  <g transform="translate(600, 300)">
+    <!-- Hull -->
+    <path d="M-200,60 C-200,60 -180,120 0,120 C180,120 200,60 200,60 L180,60 L160,-40 L-160,-40 L-180,60 Z"
+      fill="none" stroke="#ff4500" stroke-width="2" opacity="0.8"/>
+    <!-- Deck line -->
+    <line x1="-160" y1="-40" x2="160" y2="-40" stroke="#ff4500" stroke-width="1" opacity="0.5"/>
+    <!-- Mast -->
+    <line x1="0" y1="-40" x2="0" y2="-200" stroke="#ff4500" stroke-width="2" opacity="0.7"/>
+    <!-- Sail (triangle) -->
+    <path d="M0,-190 L120,-60 L0,-60 Z" fill="#ff4500" opacity="0.08" stroke="#ff4500" stroke-width="1"/>
+    <!-- Flag -->
+    <rect x="2" y="-200" width="30" height="18" fill="#ff4500" opacity="0.9"/>
+  </g>
+
+  <!-- Three pillars below the ship -->
+  <g transform="translate(0, 460)">
+    <!-- Pillar 1 -->
+    <rect x="200" y="0" width="200" height="40" rx="2" fill="none" stroke="#ff4500" stroke-width="1" opacity="0.6"/>
+    <text x="220" y="25" font-family="monospace" font-size="9" fill="#ff4500" letter-spacing="1" opacity="0.8">PLATFORM</text>
+
+    <!-- Pillar 2 -->
+    <rect x="420" y="0" width="200" height="40" rx="2" fill="none" stroke="#ff4500" stroke-width="1" opacity="0.6"/>
+    <text x="440" y="25" font-family="monospace" font-size="9" fill="#ff4500" letter-spacing="1" opacity="0.8">REVIEW + OWN</text>
+
+    <!-- Pillar 3 -->
+    <rect x="640" y="0" width="200" height="40" rx="2" fill="none" stroke="#ff4500" stroke-width="1" opacity="0.6"/>
+    <text x="660" y="25" font-family="monospace" font-size="9" fill="#ff4500" letter-spacing="1" opacity="0.8">SHIP METRICS</text>
+  </g>
+
+  <!-- Scattered data points (the 70% problem) -->
+  <text x="880" y="180" font-family="monospace" font-size="48" fill="#ff4500" opacity="0.12" font-weight="bold">70%</text>
+  <text x="880" y="210" font-family="monospace" font-size="10" fill="#444444" letter-spacing="2">BUILDS</text>
+  <text x="880" y="280" font-family="monospace" font-size="48" fill="#333333" opacity="0.3" font-weight="bold">30%</text>
+  <text x="880" y="310" font-family="monospace" font-size="10" fill="#444444" letter-spacing="2">SHIPS</text>
+
+  <!-- Connection lines from pillars up to hull -->
+  <line x1="300" y1="460" x2="440" y2="360" stroke="#ff4500" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.3"/>
+  <line x1="520" y1="460" x2="600" y2="360" stroke="#ff4500" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.3"/>
+  <line x1="740" y1="460" x2="700" y2="360" stroke="#ff4500" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.3"/>
+
+  <!-- Bottom status bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#0a0a0a"/>
+  <rect x="0" y="590" width="1200" height="1" fill="#333333"/>
+  <text x="30" y="615" font-family="monospace" font-size="11" fill="#555555" letter-spacing="2">STATUS: LUMBER_IS_NOT_A_BOAT</text>
+  <text x="1170" y="615" font-family="monospace" font-size="11" fill="#333333" text-anchor="end">cesar.ships</text>
+</svg>
