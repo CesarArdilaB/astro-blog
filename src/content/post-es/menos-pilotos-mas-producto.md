@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-04-21T00:00:00Z
-title: "Sistemas Mata Heroismo: El Playbook del Que Entrega"
+title: "Menos Pilotos, Mas Producto"
 excerpt: "Tu empresa lanzó un piloto de IA. No ha lanzado un producto de IA. Esa brecha no es un problema de herramientas, es un problema de sistemas. Las empresas que están ganando con herramientas de AI coding en 2026 son las que construyen plataformas centralizadas, cultura de code review y métricas honestas que convierten el código generado en producto real."
 image: "../../assets/images/blog/shipwrights-playbook-og.png"
 ogImage: "/og-shipwrights-playbook.png"
