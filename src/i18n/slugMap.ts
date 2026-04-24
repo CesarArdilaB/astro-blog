@@ -12,7 +12,7 @@ const esToEn: Record<string, string> = Object.fromEntries(
 
 // Maps English page paths to Spanish page paths and vice versa
 const pageEnToEs: Record<string, string> = {
-  '/shipped': '/es/enviados',
+  '/shipped': '/es/shipped',
 };
 
 const pageEsToEn: Record<string, string> = Object.fromEntries(
