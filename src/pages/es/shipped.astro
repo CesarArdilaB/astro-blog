@@ -124,8 +124,8 @@ const products = [
       <div class="absolute top-0 left-0 h-full w-24 bg-linear-to-r from-brand-dark to-transparent z-10"></div>
     </div>
 
-    <!-- Hero -->
-    <div class="col-span-1 md:col-span-12 bg-brand-dark text-brand-light p-12 md:p-24 flex flex-col justify-center border-t border-brand-border relative overflow-hidden">
+    <!-- Hero (sticky) -->
+    <div class="col-span-1 md:col-span-12 sticky top-0 z-0 bg-brand-dark text-brand-light p-12 md:p-24 flex flex-col justify-center border-t border-brand-border relative overflow-hidden min-h-[60vh]">
       <h1 class="font-mono text-5xl md:text-8xl font-bold tracking-tighter leading-none glitch-text mb-4" data-text="PRODUCTS SHIPPED.">
         PRODUCTS SHIPPED.
       </h1>
@@ -137,8 +137,8 @@ const products = [
       </div>
     </div>
 
-    <!-- Timeline -->
-    <div class="col-span-1 md:col-span-12 bg-brand-dark border-t border-brand-border">
+    <!-- Timeline (scrolls over sticky hero) -->
+    <div class="col-span-1 md:col-span-12 bg-brand-dark border-t border-brand-border relative z-10">
       <div class="p-6 border-b border-brand-border flex items-center gap-4">
         <div class="w-3 h-3 bg-brand-accent"></div>
         <h2 class="font-mono text-lg tracking-widest">DEPLOYMENT_LOG</h2>
