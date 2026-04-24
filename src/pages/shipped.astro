@@ -153,7 +153,7 @@ const products = [
 
             {/* Year node */}
             <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10">
-              <div class={`w-4 h-4 border-2 border-brand-accent ${product.active ? 'bg-brand-accent shadow-[0_0_12px_var(--color-brand-accent)]' : 'bg-brand-dark'} transition-all`}></div>
+              <div class={`timeline-node w-4 h-4 border-2 border-brand-accent ${product.active ? 'bg-brand-accent shadow-[0_0_12px_var(--color-brand-accent)]' : 'bg-brand-dark'} transition-all`}></div>
             </div>
 
             {/* Content card */}
@@ -190,7 +190,7 @@ const products = [
               {/* Details as scan lines */}
               <ul class={`flex flex-col gap-1.5 ${i % 2 === 0 ? 'md:items-end' : ''}`}>
                 {product.details.map((detail) => (
-                  <li class={`font-mono text-xs text-gray-600 flex items-center gap-2 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                  <li class={`detail-item font-mono text-xs text-gray-600 flex items-center gap-2 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                     <span class="w-6 h-px bg-brand-accent opacity-40 shrink-0"></span>
                     <span>{detail}</span>
                   </li>
@@ -216,6 +216,33 @@ const products = [
 
     <Footer />
   </main>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Draw the timeline line
+      var line = document.querySelector('.timeline-line');
+      if (line) {
+        setTimeout(function() { line.classList.add('draw'); }, 300);
+      }
+
+      // Reveal entries on scroll
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('.timeline-entry').forEach(function(el) {
+        observer.observe(el);
+      });
+    });
+  </script>
 </Layout>
 
 <style>
@@ -266,32 +293,46 @@ const products = [
     100% { clip: rect(4px, 9999px, 78px, 0); }
   }
 
-  /* Timeline entry reveal on scroll */
+  /* Timeline entries: hidden until scroll reveals them */
   .timeline-entry {
     opacity: 0;
-    transform: translateY(20px);
-    animation: reveal 0.6s ease-out forwards;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 
-  .timeline-entry:nth-child(1) { animation-delay: 0.1s; }
-  .timeline-entry:nth-child(2) { animation-delay: 0.2s; }
-  .timeline-entry:nth-child(3) { animation-delay: 0.3s; }
-  .timeline-entry:nth-child(4) { animation-delay: 0.4s; }
-  .timeline-entry:nth-child(5) { animation-delay: 0.5s; }
-  .timeline-entry:nth-child(6) { animation-delay: 0.6s; }
-  .timeline-entry:nth-child(7) { animation-delay: 0.7s; }
-  .timeline-entry:nth-child(8) { animation-delay: 0.8s; }
-  .timeline-entry:nth-child(9) { animation-delay: 0.9s; }
-  .timeline-entry:nth-child(10) { animation-delay: 1.0s; }
+  /* Even entries (left side on desktop) slide from left */
+  .timeline-entry:nth-child(odd) {
+    transform: translateX(-40px) translateY(20px);
+  }
 
-  @keyframes reveal {
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  /* Odd entries (right side on desktop) slide from right */
+  .timeline-entry:nth-child(even) {
+    transform: translateX(40px) translateY(20px);
+  }
+
+  /* Mobile: all slide up */
+  @media (max-width: 768px) {
+    .timeline-entry:nth-child(odd),
+    .timeline-entry:nth-child(even) {
+      transform: translateX(0) translateY(30px);
     }
   }
 
-  /* Glowing line pulse */
+  .timeline-entry.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+
+  /* Node scale on reveal */
+  .timeline-entry .timeline-node {
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .timeline-entry.visible .timeline-node {
+    transform: scale(1);
+  }
+
+  /* Timeline line draws as you scroll */
   .timeline-line {
     background: linear-gradient(
       to bottom,
@@ -300,5 +341,30 @@ const products = [
       var(--color-brand-border) 80%,
       transparent 100%
     );
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 1.2s ease-out;
   }
+
+  .timeline-line.draw {
+    transform: scaleY(1);
+  }
+
+  /* Parallax depth for detail items */
+  .timeline-entry .detail-item {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+
+  .timeline-entry.visible .detail-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .timeline-entry.visible .detail-item:nth-child(1) { transition-delay: 0.2s; }
+  .timeline-entry.visible .detail-item:nth-child(2) { transition-delay: 0.35s; }
+  .timeline-entry.visible .detail-item:nth-child(3) { transition-delay: 0.5s; }
+  .timeline-entry.visible .detail-item:nth-child(4) { transition-delay: 0.65s; }
+  .timeline-entry.visible .detail-item:nth-child(5) { transition-delay: 0.8s; }
 </style>
