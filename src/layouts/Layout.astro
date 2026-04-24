@@ -91,6 +91,22 @@ const canonicalURL = new URL(Astro.url.pathname, SITE_URL).href;
 	</head>
 	<body class="bg-brand-dark text-brand-light font-sans antialiased selection:bg-brand-accent selection:text-brand-dark">
 		<slot />
+		<script is:inline>
+			(function() {
+				var colors = [
+					'#ff4500', // original orange
+					'#00ff88', // neon green
+					'#ff006e', // hot pink
+					'#00d4ff', // electric cyan
+					'#bf5af2', // vivid purple
+					'#ffcc00', // glowing yellow
+					'#ff3366', // neon red-pink
+					'#39ff14', // electric lime
+				];
+				var pick = colors[Math.floor(Math.random() * colors.length)];
+				document.documentElement.style.setProperty('--color-brand-accent', pick);
+			})();
+		</script>
 	</body>
 </html>
 
