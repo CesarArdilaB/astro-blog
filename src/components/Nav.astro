@@ -2,17 +2,9 @@
 import { getLangFromUrl } from '../i18n/translations';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
-interface Props {
-  marquee?: string;
-}
-
 const lang = getLangFromUrl(Astro.url);
 const prefix = lang === 'es' ? '/es' : '';
 const currentPath = Astro.url.pathname;
-const { marquee } = Astro.props;
-
-const defaultMarquee = 'FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT /// FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT /// FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT ///';
-const marqueeText = marquee || defaultMarquee;
 
 const links = [
   { href: `${prefix}/`, label: 'HOME' },
@@ -77,14 +69,7 @@ function isActive(href: string) {
     </div>
   </div>
 
-  <!-- Marquee -->
-  <div class="border-t border-brand-border flex items-center overflow-hidden relative">
-    <div class="animate-marquee whitespace-nowrap font-mono text-xs md:text-sm tracking-widest text-brand-light/80 py-3">
-      {marqueeText}
-    </div>
-    <div class="absolute top-0 right-0 h-full w-24 bg-linear-to-l from-brand-dark to-transparent z-10"></div>
-    <div class="absolute top-0 left-0 h-full w-24 bg-linear-to-r from-brand-dark to-transparent z-10"></div>
-  </div>
+
 </div>
 
 <script is:inline>
@@ -100,13 +85,3 @@ function isActive(href: string) {
   })();
 </script>
 
-<style>
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-marquee {
-    display: inline-block;
-    animation: marquee 20s linear infinite;
-  }
-</style>
