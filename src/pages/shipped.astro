@@ -106,7 +106,7 @@ const products = [
 >
   <main class="min-h-screen grid grid-cols-1 md:grid-cols-12 gap-px bg-brand-border border border-brand-border">
 
-    <Nav />
+    <Nav marquee="SHIPPED /// DEPLOYED /// DELIVERED /// SHIPPED /// DEPLOYED /// DELIVERED /// SHIPPED /// DEPLOYED /// DELIVERED ///" />
 
     <!-- Hero (sticky) -->
     <div class="col-span-1 md:col-span-12 sticky top-0 z-0 bg-brand-dark text-brand-light p-12 md:p-24 flex flex-col justify-center border-t border-brand-border relative overflow-hidden min-h-[60vh]">
@@ -259,15 +259,6 @@ const products = [
 </Layout>
 
 <style>
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-marquee {
-    display: inline-block;
-    animation: marquee 20s linear infinite;
-  }
-
   .glitch-text { position: relative; }
   .glitch-text::before,
   .glitch-text::after {

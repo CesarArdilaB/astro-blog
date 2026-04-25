@@ -2,9 +2,17 @@
 import { getLangFromUrl } from '../i18n/translations';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
+interface Props {
+  marquee?: string;
+}
+
 const lang = getLangFromUrl(Astro.url);
 const prefix = lang === 'es' ? '/es' : '';
 const currentPath = Astro.url.pathname;
+const { marquee } = Astro.props;
+
+const defaultMarquee = 'FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT /// FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT /// FORM FOLLOWS FUNCTION /// SHIPPING VALUE /// NO BLOAT ///';
+const marqueeText = marquee || defaultMarquee;
 
 const links = [
   { href: `${prefix}/`, label: 'HOME' },
@@ -19,15 +27,14 @@ function isActive(href: string) {
 }
 ---
 
-<nav class="col-span-1 md:col-span-12 bg-brand-dark border-b border-brand-border">
-  <div class="flex items-center justify-between p-4 md:px-6">
-    <!-- Logo + brand -->
+<div class="col-span-1 md:col-span-12 bg-brand-dark border-b border-brand-border">
+  <!-- Top bar: logo + nav + hamburger -->
+  <nav class="flex items-center justify-between p-4 md:px-6">
     <a href={`${prefix}/`} class="flex items-center gap-3 group">
       <img src="/logo_barras.png" alt="cesar.ships Logo" class="h-10 w-auto" />
       <span class="font-mono text-lg tracking-tighter font-bold bg-brand-accent text-brand-dark px-1">cesar.ships</span>
     </a>
 
-    <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-6">
       {links.map((link) => (
         <a
@@ -45,11 +52,10 @@ function isActive(href: string) {
       <LanguageSwitcher />
     </div>
 
-    <!-- Mobile hamburger -->
     <button id="nav-toggle" class="md:hidden font-mono text-brand-accent text-lg p-1" aria-label="Menu">
       <span id="nav-icon">///</span>
     </button>
-  </div>
+  </nav>
 
   <!-- Mobile menu -->
   <div id="nav-mobile" class="hidden md:hidden border-t border-brand-border">
@@ -70,13 +76,37 @@ function isActive(href: string) {
       <LanguageSwitcher />
     </div>
   </div>
-</nav>
+
+  <!-- Marquee -->
+  <div class="border-t border-brand-border flex items-center overflow-hidden relative">
+    <div class="animate-marquee whitespace-nowrap font-mono text-xs md:text-sm tracking-widest text-brand-light/80 py-3">
+      {marqueeText}
+    </div>
+    <div class="absolute top-0 right-0 h-full w-24 bg-linear-to-l from-brand-dark to-transparent z-10"></div>
+    <div class="absolute top-0 left-0 h-full w-24 bg-linear-to-r from-brand-dark to-transparent z-10"></div>
+  </div>
+</div>
 
 <script is:inline>
-  document.getElementById('nav-toggle').addEventListener('click', function() {
-    var menu = document.getElementById('nav-mobile');
-    var icon = document.getElementById('nav-icon');
-    var open = menu.classList.toggle('hidden');
-    icon.textContent = open ? '///' : 'X';
-  });
+  (function() {
+    var toggle = document.getElementById('nav-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', function() {
+      var menu = document.getElementById('nav-mobile');
+      var icon = document.getElementById('nav-icon');
+      var open = menu.classList.toggle('hidden');
+      icon.textContent = open ? '///' : 'X';
+    });
+  })();
 </script>
+
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+  }
+</style>
