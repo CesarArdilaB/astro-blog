@@ -1,0 +1,87 @@
+---
+import { getLangFromUrl } from '../i18n/translations';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const prefix = lang === 'es' ? '/es' : '';
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: `${prefix}/`, label: 'HOME' },
+  { href: `${prefix}/shipped`, label: 'SHIPPED' },
+  { href: '/contact', label: 'CONTACT' },
+];
+
+function isActive(href: string) {
+  const clean = currentPath.replace(/\/$/, '') || '/';
+  const cleanHref = href.replace(/\/$/, '') || '/';
+  return clean === cleanHref;
+}
+---
+
+<div class="col-span-1 md:col-span-12 bg-brand-dark border-b border-brand-border">
+  <!-- Top bar: logo + nav + hamburger -->
+  <nav class="flex items-center justify-between p-4 md:px-6">
+    <a href={`${prefix}/`} class="flex items-center gap-3 group">
+      <img src="/logo_barras.png" alt="cesar.ships Logo" class="h-10 w-auto" />
+      <span class="font-mono text-lg tracking-tighter font-bold bg-brand-accent text-brand-dark px-1">cesar.ships</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-6">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class={`font-mono text-xs tracking-widest transition-colors ${
+            isActive(link.href)
+              ? 'text-brand-accent'
+              : 'text-gray-500 hover:text-brand-accent'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      <div class="w-px h-4 bg-brand-border"></div>
+      <LanguageSwitcher />
+    </div>
+
+    <button id="nav-toggle" class="md:hidden font-mono text-brand-accent text-lg p-1" aria-label="Menu">
+      <span id="nav-icon">///</span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="nav-mobile" class="hidden md:hidden border-t border-brand-border">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class={`block px-6 py-3 font-mono text-sm tracking-widest border-b border-brand-border transition-colors ${
+          isActive(link.href)
+            ? 'text-brand-accent bg-[#0a0a0a]'
+            : 'text-gray-500 hover:text-brand-accent hover:bg-[#0a0a0a]'
+        }`}
+      >
+        <span class="text-brand-accent mr-2">&gt;</span>{link.label}
+      </a>
+    ))}
+    <div class="px-6 py-3 flex items-center gap-2">
+      <span class="font-mono text-xs text-gray-600 tracking-widest">LANG:</span>
+      <LanguageSwitcher />
+    </div>
+  </div>
+
+
+</div>
+
+<script is:inline>
+  (function() {
+    var toggle = document.getElementById('nav-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', function() {
+      var menu = document.getElementById('nav-mobile');
+      var icon = document.getElementById('nav-icon');
+      var open = menu.classList.toggle('hidden');
+      icon.textContent = open ? '///' : 'X';
+    });
+  })();
+</script>
+

@@ -90,32 +90,115 @@ const canonicalURL = new URL(Astro.url.pathname, SITE_URL).href;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-brand-dark text-brand-light font-sans antialiased selection:bg-brand-accent selection:text-brand-dark">
-		<slot />
+		<!-- Transition overlay -->
+		<div id="page-transition" class="page-transition"></div>
+
+		<div id="page-content" class="page-content">
+			<slot />
+		</div>
+
 		<script is:inline>
 			(function() {
+				// Random accent color
 				var colors = [
-					'#ff4500', // original orange
-					'#00ff88', // neon green
-					'#ff006e', // hot pink
-					'#00d4ff', // electric cyan
-					'#bf5af2', // vivid purple
-					'#ffcc00', // glowing yellow
-					'#ff3366', // neon red-pink
-					'#39ff14', // electric lime
+					'#ff4500', '#00ff88', '#ff006e', '#00d4ff',
+					'#bf5af2', '#ffcc00', '#ff3366', '#39ff14',
 				];
 				var pick = colors[Math.floor(Math.random() * colors.length)];
 				document.documentElement.style.setProperty('--color-brand-accent', pick);
+
+				// Page enter animation
+				var content = document.getElementById('page-content');
+				content.classList.add('entered');
+
+				// Intercept internal link clicks for exit transition
+				document.addEventListener('click', function(e) {
+					var link = e.target.closest('a');
+					if (!link) return;
+					var href = link.getAttribute('href');
+					if (!href) return;
+
+					// Skip external links, anchors, and special links
+					if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:') || link.target === '_blank') return;
+
+					e.preventDefault();
+					var overlay = document.getElementById('page-transition');
+					content.classList.add('exiting');
+					overlay.classList.add('active');
+
+					setTimeout(function() {
+						window.location.href = href;
+					}, 350);
+				});
 			})();
 		</script>
 	</body>
 </html>
 
 <style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
                 overscroll-behavior: none;
+	}
+
+	/* Page transition overlay */
+	.page-transition {
+		position: fixed;
+		inset: 0;
+		z-index: 9999;
+		pointer-events: none;
+		background: #050505;
+		opacity: 0;
+		transition: opacity 0.3s ease-out;
+	}
+
+	.page-transition.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	/* Scan lines on the overlay */
+	.page-transition.active::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: repeating-linear-gradient(
+			0deg,
+			transparent,
+			transparent 2px,
+			rgba(255, 255, 255, 0.02) 2px,
+			rgba(255, 255, 255, 0.02) 4px
+		);
+		animation: scan-down 0.3s linear;
+	}
+
+	@keyframes scan-down {
+		from { transform: translateY(-100%); }
+		to { transform: translateY(0); }
+	}
+
+	/* Page content enter/exit */
+	.page-content {
+		opacity: 0;
+		transform: translateY(8px);
+		transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+	}
+
+	.page-content.entered {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.page-content.exiting {
+		opacity: 0;
+		transform: translateY(-8px);
+		transition: opacity 0.25s ease-in, transform 0.25s ease-in;
 	}
 </style>

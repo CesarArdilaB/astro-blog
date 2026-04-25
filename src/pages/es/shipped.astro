@@ -1,0 +1,318 @@
+---
+export const prerender = true;
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import Nav from '../../components/Nav.astro';
+
+const products = [
+  {
+    year: '2024',
+    name: 'Kiwibot Operations Platform',
+    tagline: 'Orquestacion de robots de entrega autonoma operando en multiples ciudades.',
+    url: 'https://www.kiwibot.com',
+    active: true,
+    details: [
+      'Ecosistema aumentado con IA y alto nivel de autonomia',
+      'Operaciones en multiples ciudades y campus',
+      'Arquitectura automation-first para operacion completamente autonoma',
+      'Postura de ciberseguridad y cumplimiento ISO 27001',
+    ],
+  },
+  {
+    year: '2023',
+    name: 'Kiwibot Auto-Assigner v2',
+    tagline: 'Motor de asignacion de ordenes en tiempo real para optimizacion de flota.',
+    active: true,
+    details: [
+      'Disenado y construido desde cero en v2',
+      'Optimiza la asignacion robot-orden en tiempo real',
+      'Escalado a multiples campus y ciudades',
+    ],
+  },
+  {
+    year: '2021',
+    name: 'Kiwibot Real-Time System',
+    tagline: 'Dashboard de operaciones con WebSockets para monitoreo de flota en vivo.',
+    active: true,
+    details: [
+      'Datos en tiempo real con web sockets',
+      'Construi el v1 junto al equipo de producto',
+      'Estado de flota en vivo, telemetria y alertas',
+    ],
+  },
+  {
+    year: '2021',
+    name: 'Vaki',
+    tagline: 'Plataforma de crowdfunding latinoamericana conectando creadores con patrocinadores.',
+    url: 'https://vaki.co',
+    details: [
+      'Itere la plataforma con nuevas funcionalidades',
+      'Propuse y lance mejoras de producto',
+    ],
+  },
+  {
+    year: '2019',
+    name: 'Native',
+    tagline: 'Plataforma construida desde cero con Flutter. Co-fundada y liderada como CEO.',
+    details: [
+      'Desarrolle la plataforma completa desde cero',
+      'Experiencia mobile y web basada en Flutter',
+      'Adquisicion de usuarios e iteracion continua',
+    ],
+  },
+  {
+    year: '2016',
+    name: 'ERP para Construccion',
+    tagline: 'Planificacion de recursos empresariales para la industria de la construccion colombiana.',
+    details: [
+      'Construido desde cero para ParaSuEmpresa',
+      'ERP de punta a punta cubriendo el ciclo de vida de construccion',
+    ],
+  },
+  {
+    year: '2015',
+    name: 'Sistema Comercial Biospifar',
+    tagline: 'Plataforma de gestion comercial para un laboratorio farmaceutico.',
+    details: [
+      'Ventas, inventario y operaciones comerciales',
+    ],
+  },
+  {
+    year: '2014',
+    name: 'Inventario Cruz Verde',
+    tagline: 'Sistema de conteo de inventario para una de las cadenas de farmacias mas grandes de Colombia.',
+    details: [
+      'Operaciones de conteo de inventario optimizadas a escala',
+    ],
+  },
+  {
+    year: '2012',
+    name: 'Soluciones Merck',
+    tagline: 'Software empresarial a medida para la farmaceutica Merck.',
+    details: ['Soluciones de grado empresarial'],
+  },
+  {
+    year: '2011',
+    name: 'Soluciones Brightstar',
+    tagline: 'Software a medida para Brightstar distribucion movil.',
+    details: ['Herramientas de distribucion y logistica'],
+  },
+];
+---
+
+<Layout
+  title="Shipped"
+  description="Productos que he construido y lanzado. Desde robots de entrega autonoma hasta ERPs, plataformas de crowdfunding y sistemas en tiempo real."
+>
+  <main class="min-h-screen grid grid-cols-1 md:grid-cols-12 gap-px bg-brand-border border border-brand-border">
+
+    <Nav />
+
+    <!-- Hero (sticky) -->
+    <div class="col-span-1 md:col-span-12 sticky top-0 z-0 bg-brand-dark text-brand-light p-12 md:p-24 flex flex-col justify-center border-t border-brand-border relative overflow-hidden min-h-[60vh]">
+      <h1 class="font-mono text-5xl md:text-8xl font-bold tracking-tighter leading-none glitch-text mb-4" data-text="PRODUCTS SHIPPED.">
+        PRODUCTS SHIPPED.
+      </h1>
+      <p class="font-sans text-xl md:text-2xl text-gray-400 max-w-2xl">
+        15 anos construyendo productos que llegan a usuarios reales. <span class="text-brand-accent">Estos son algunos.</span>
+      </p>
+      <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none"
+        style="background-image: radial-gradient(#333 1px, transparent 1px); background-size: 20px 20px;">
+      </div>
+    </div>
+
+    <!-- Timeline (scrolls over sticky hero) -->
+    <div class="col-span-1 md:col-span-12 bg-brand-dark border-t border-brand-border relative z-10">
+      <div class="p-6 border-b border-brand-border flex items-center gap-4">
+        <div class="w-3 h-3 bg-brand-accent"></div>
+        <h2 class="font-mono text-lg tracking-widest">DEPLOYMENT_LOG</h2>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto py-16 px-6 md:px-12">
+        <!-- Vertical line -->
+        <div class="timeline-line absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-brand-border md:-translate-x-px"></div>
+
+        {products.map((product, i) => (
+          <div class={`timeline-entry relative flex flex-col md:flex-row md:items-start mb-16 last:mb-0 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+
+            <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10">
+              <div class={`timeline-node w-4 h-4 border-2 border-brand-accent ${product.active ? 'bg-brand-accent shadow-[0_0_12px_var(--color-brand-accent)]' : 'bg-brand-dark'} transition-all`}></div>
+            </div>
+
+            <div class={`ml-14 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:ml-auto'}`}>
+
+              <div class={`flex items-center gap-3 mb-3 ${i % 2 === 0 ? 'md:justify-end' : ''}`}>
+                <span class="font-mono text-xs tracking-widest text-gray-600">{product.year}</span>
+                {product.active && (
+                  <span class="flex items-center gap-1.5 font-mono text-xs tracking-widest text-green-500">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse-slow"></span>
+                    LIVE
+                  </span>
+                )}
+              </div>
+
+              {product.url ? (
+                <a href={product.url} target="_blank" rel="noopener noreferrer" class="group inline-block">
+                  <h3 class="font-mono text-xl md:text-2xl font-bold tracking-tight text-brand-light group-hover:text-brand-accent transition-colors">
+                    {product.name}
+                    <span class="text-gray-600 group-hover:text-brand-accent ml-2 text-sm">&rarr;</span>
+                  </h3>
+                </a>
+              ) : (
+                <h3 class="font-mono text-xl md:text-2xl font-bold tracking-tight text-brand-light">
+                  {product.name}
+                </h3>
+              )}
+
+              <p class="font-sans text-sm text-gray-500 mt-2 mb-4">{product.tagline}</p>
+
+              <ul class={`flex flex-col gap-1.5 ${i % 2 === 0 ? 'md:items-end' : ''}`}>
+                {product.details.map((detail) => (
+                  <li class={`detail-item font-mono text-xs text-gray-600 flex items-center gap-2 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                    <span class="w-6 h-px bg-brand-accent opacity-40 shrink-0"></span>
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class={`mt-6 flex gap-1 ${i % 2 === 0 ? 'md:justify-end' : ''}`}>
+                <div class="w-12 h-px bg-brand-accent opacity-20"></div>
+                <div class="w-6 h-px bg-brand-accent opacity-10"></div>
+                <div class="w-3 h-px bg-brand-accent opacity-5"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 bottom-0">
+          <div class="w-2 h-2 bg-brand-border"></div>
+        </div>
+      </div>
+    </div>
+
+    <Footer />
+  </main>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      var line = document.querySelector('.timeline-line');
+      if (line) setTimeout(function() { line.classList.add('draw'); }, 300);
+
+      var entries = document.querySelectorAll('.timeline-entry');
+      var ticking = false;
+
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() {
+          var vh = window.innerHeight;
+          var center = vh * 0.5;
+          var zone = vh * 0.6;
+
+          entries.forEach(function(el, i) {
+            var rect = el.getBoundingClientRect();
+            var elCenter = rect.top + rect.height / 2;
+            var dist = Math.abs(elCenter - center);
+            var progress = Math.max(0, Math.min(1, 1 - dist / zone));
+
+            var ease = progress * progress * (3 - 2 * progress);
+
+            var scale = 0.85 + 0.15 * ease;
+            var opacity = ease;
+            var isOdd = i % 2 === 0;
+            var slideX = window.innerWidth >= 768 ? (1 - ease) * (isOdd ? -50 : 50) : 0;
+            var slideY = (1 - ease) * 20;
+
+            el.style.opacity = opacity;
+            el.style.transform = 'translateX(' + slideX + 'px) translateY(' + slideY + 'px) scale(' + scale + ')';
+
+            var node = el.querySelector('.timeline-node');
+            if (node) node.style.transform = 'scale(' + ease + ')';
+
+            var details = el.querySelectorAll('.detail-item');
+            details.forEach(function(d, j) {
+              var detailProgress = Math.max(0, Math.min(1, (progress - 0.2 - j * 0.08) / 0.5));
+              d.style.opacity = detailProgress;
+              d.style.transform = 'translateY(' + (1 - detailProgress) * 12 + 'px)';
+            });
+          });
+
+          ticking = false;
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
+</Layout>
+
+<style>
+  .glitch-text { position: relative; }
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #050505;
+  }
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+  }
+  @keyframes glitch-anim {
+    0% { clip: rect(38px, 9999px, 83px, 0); }
+    20% { clip: rect(7px, 9999px, 86px, 0); }
+    40% { clip: rect(54px, 9999px, 14px, 0); }
+    60% { clip: rect(2px, 9999px, 3px, 0); }
+    80% { clip: rect(28px, 9999px, 96px, 0); }
+    100% { clip: rect(81px, 9999px, 4px, 0); }
+  }
+  @keyframes glitch-anim2 {
+    0% { clip: rect(52px, 9999px, 20px, 0); }
+    20% { clip: rect(98px, 9999px, 6px, 0); }
+    40% { clip: rect(13px, 9999px, 89px, 0); }
+    60% { clip: rect(79px, 9999px, 26px, 0); }
+    80% { clip: rect(41px, 9999px, 1px, 0); }
+    100% { clip: rect(4px, 9999px, 78px, 0); }
+  }
+
+  .timeline-entry {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .timeline-entry .timeline-node {
+    will-change: transform;
+  }
+
+  .timeline-entry .detail-item {
+    will-change: transform, opacity;
+  }
+
+  .timeline-line {
+    background: linear-gradient(
+      to bottom,
+      var(--color-brand-accent) 0%,
+      var(--color-brand-border) 20%,
+      var(--color-brand-border) 80%,
+      transparent 100%
+    );
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 1.2s ease-out;
+  }
+
+  .timeline-line.draw {
+    transform: scaleY(1);
+  }
+</style>
