@@ -99,13 +99,21 @@ const canonicalURL = new URL(Astro.url.pathname, SITE_URL).href;
 
 		<script is:inline>
 			(function() {
-				// Random accent color
-				var colors = [
-					'#ff4500', '#00ff88', '#ff006e', '#00d4ff',
-					'#bf5af2', '#ffcc00', '#ff3366', '#39ff14',
+				// Random accent color + matching favicon
+				var palette = [
+					{ hex: '#ff4500', slug: 'orange' },
+					{ hex: '#00ff88', slug: 'green' },
+					{ hex: '#ff006e', slug: 'pink' },
+					{ hex: '#00d4ff', slug: 'cyan' },
+					{ hex: '#bf5af2', slug: 'purple' },
+					{ hex: '#ffcc00', slug: 'yellow' },
+					{ hex: '#ff3366', slug: 'redpink' },
+					{ hex: '#39ff14', slug: 'lime' },
 				];
-				var pick = colors[Math.floor(Math.random() * colors.length)];
-				document.documentElement.style.setProperty('--color-brand-accent', pick);
+				var pick = palette[Math.floor(Math.random() * palette.length)];
+				document.documentElement.style.setProperty('--color-brand-accent', pick.hex);
+				var favicon = document.querySelector('link[rel="icon"]');
+				if (favicon) favicon.setAttribute('href', '/favicon/favicon-' + pick.slug + '.svg');
 
 				// Page enter animation
 				var content = document.getElementById('page-content');
