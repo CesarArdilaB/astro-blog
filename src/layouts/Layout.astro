@@ -111,6 +111,10 @@ const canonicalURL = new URL(Astro.url.pathname, SITE_URL).href;
 </html>
 
 <style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+
 	html,
 	body {
 		margin: 0;
