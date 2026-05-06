@@ -38,7 +38,7 @@ Building fast in the wrong direction is not a productivity gain. It is a leverag
 
 The faster you build without research, the faster you arrive at a product nobody wants.
 
-This is the inversion every team needs to internalize. In 2017 your competitive edge was being able to ship. Today everyone can build. The edge has moved upstream, into the work of figuring out what to build in the first place.
+This is the inversion every team needs to internalize. In 2017 your competitive edge was being able to ship. Today everyone can build. The edge has moved upstream, into the work of figuring out what to build in the first place. This is the same shift I explored in [From Full-Stack Developer to Full-Stack Product Engineer](/post/from-full-stack-developer-to-full-stack-product-engineer): the most valuable engineers are the ones who expand beyond code into research and product ownership.
 
 ## Three Things Research-Driven Teams Do Differently
 
@@ -100,7 +100,7 @@ The compression is real. But it only pays off when the input to that pipeline is
 
 That is the real workflow shift. Research used to be slow because synthesis was slow. AI removes the synthesis tax. Research used to be expensive because every cycle of customer contact required a researcher's calendar. AI lets a single product engineer run interviews, synthesize them, draft a PRD, and prototype the resulting hypothesis in the time it used to take to schedule the kickoff.
 
-**AI accelerates the building work. AI accelerates the synthesis work. The human stays at the center of the customer conversation.** The conversation is the part that does not compress, because it is the part that produces the asset.
+**AI accelerates the building work. AI accelerates the synthesis work. The human stays at the center of the customer conversation.** The conversation is the part that does not compress, because it is the part that produces the asset. (For more on why [AI widens the gap between teams that have discipline and teams that do not](/post/ai-is-widening-the-gap), see the previous post in this series.)
 
 ## Signals You Are Skipping the Work
 
@@ -136,7 +136,7 @@ A shipwright's first tool was never the saw. It was the conversation with the ca
 
 The wood came later. The saw came after that.
 
-AI gives every product team a sharper saw than they have ever had. It does not give them a captain. The captain still has to be found, listened to, and understood. By a human, in person or on a video call, in the language the customer actually uses about the problem they actually have.
+AI gives every product team a sharper saw than they have ever had. It does not give them a captain. The captain still has to be found, listened to, and understood. By a human, in person or on a video call, in the language the customer actually uses about the problem they actually have. (If you want the systems playbook for turning that understanding into shipped product, read [The Shipwright's Playbook](/post/shipwrights-playbook).)
 
 Build is cheap. Insight is the asset. Research is how you keep one without sacrificing the other.
 

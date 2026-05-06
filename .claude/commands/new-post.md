@@ -58,13 +58,23 @@ Create a brand-consistent SVG at `src/assets/images/blog/SLUG.svg`:
 - Visual metaphor related to the post topic
 - "cesar.ships" watermark bottom-right
 
-### 5. Add inline source links
+### 5. Link to related articles
+
+Every post must include at least one internal link to another related article on the blog. This helps readers discover more content and improves SEO through internal linking.
+
+- Read other posts in `src/content/post/` to find related topics
+- Use the format `[Article Title](/post/SLUG)` for internal links
+- Place links naturally within the text where they add value to the reader (e.g., "as I explored in [Article Title](/post/SLUG)")
+- Ideal placement: within a paragraph where the topic of the linked article is relevant, or in the closing section
+- Aim for 1-3 internal links per post depending on length
+
+### 6. Add inline source links
 
 If the user provides sources or references:
 - Use `<a href="URL" target="_blank" rel="noopener noreferrer">linked text</a>` for inline links (opens in new tab)
 - Add a `## Sources` section at the bottom with full citations as links
 
-### 6. Sign the post
+### 7. Sign the post
 
 End every post with:
 
@@ -74,10 +84,10 @@ End every post with:
 With love, Cesar Ardila 🎵
 ```
 
-### 7. Build and verify
+### 8. Build and verify
 
 Run `npm run build` to verify the post compiles without errors.
 
-### 8. Translation
+### 9. Translation
 
 After publishing an English post, offer to translate it to Spanish using the `/translate-post` skill. Spanish translations use the same SVG image and follow transcreation principles (not literal translation). See `.claude/commands/translate-post.md` for the full translation guidelines.

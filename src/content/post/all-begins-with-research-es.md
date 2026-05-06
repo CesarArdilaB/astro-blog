@@ -38,7 +38,7 @@ Construir rápido en la dirección incorrecta no es una ganancia de productivida
 
 Mientras más rápido construyes sin investigación, más rápido llegas a un producto que nadie quiere.
 
-Esta es la inversión que todo equipo necesita internalizar. En 2017 tu ventaja competitiva era poder entregar. Hoy todos pueden construir. La ventaja se movió río arriba, hacia el trabajo de descifrar qué construir.
+Esta es la inversión que todo equipo necesita internalizar. En 2017 tu ventaja competitiva era poder entregar. Hoy todos pueden construir. La ventaja se movió río arriba, hacia el trabajo de descifrar qué construir. Es el mismo cambio que exploré en [De Desarrollador Full-Stack a Ingeniero de Producto Full-Stack](/post/from-full-stack-developer-to-full-stack-product-engineer): los ingenieros más valiosos son los que se expanden más allá del código hacia la investigación y la ownership de producto.
 
 ## Tres Cosas que Hacen Diferente los Equipos Orientados a Investigación
 
@@ -100,7 +100,7 @@ La compresión es real. Pero solo rinde cuando el input del pipeline es un probl
 
 Ese es el verdadero cambio de workflow. La investigación solía ser lenta porque la síntesis era lenta. La IA elimina el impuesto de síntesis. La investigación solía ser cara porque cada ciclo de contacto con clientes requería la agenda de un researcher. La IA permite que un solo product engineer corra entrevistas, las sintetice, redacte un PRD, y prototipe la hipótesis resultante en el tiempo que antes tomaba agendar el kickoff.
 
-**La IA acelera el trabajo de construcción. La IA acelera el trabajo de síntesis. El humano se queda en el centro de la conversación con el cliente.** La conversación es la parte que no se comprime, porque es la parte que produce el activo.
+**La IA acelera el trabajo de construcción. La IA acelera el trabajo de síntesis. El humano se queda en el centro de la conversación con el cliente.** La conversación es la parte que no se comprime, porque es la parte que produce el activo. (Para más sobre por qué [la IA amplía la brecha entre equipos con disciplina y equipos sin ella](/post/ai-is-widening-the-gap), lee el post anterior de esta serie.)
 
 ## Señales de que Te Estás Saltando el Trabajo
 
@@ -136,7 +136,7 @@ La primera herramienta de un carpintero de barcos nunca fue la sierra. Era la co
 
 La madera venía después. La sierra venía después de eso.
 
-La IA le da a cada equipo de producto una sierra más afilada que cualquiera que hayan tenido. No les da un capitán. Al capitán todavía hay que encontrarlo, escucharlo y entenderlo. Un humano, en persona o en una videollamada, en el lenguaje que el cliente realmente usa sobre el problema que realmente tiene.
+La IA le da a cada equipo de producto una sierra más afilada que cualquiera que hayan tenido. No les da un capitán. Al capitán todavía hay que encontrarlo, escucharlo y entenderlo. Un humano, en persona o en una videollamada, en el lenguaje que el cliente realmente usa sobre el problema que realmente tiene. (Si quieres el playbook de sistemas para convertir ese entendimiento en producto entregado, lee [The Shipwright's Playbook](/post/shipwrights-playbook).)
 
 Construir es barato. El insight es el activo. La investigación es cómo conservas uno sin sacrificar el otro.
 
