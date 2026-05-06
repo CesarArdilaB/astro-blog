@@ -38,7 +38,7 @@ Building fast in the wrong direction is not a productivity gain. It is a leverag
 
 The faster you build without research, the faster you arrive at a product nobody wants.
 
-This is the inversion every team needs to internalize. In 2017 your competitive edge was being able to ship. Today everyone can ship. The edge has moved upstream, into the work of figuring out what to build in the first place.
+This is the inversion every team needs to internalize. In 2017 your competitive edge was being able to ship. Today everyone can build. The edge has moved upstream, into the work of figuring out what to build in the first place.
 
 ## Three Things Research-Driven Teams Do Differently
 
