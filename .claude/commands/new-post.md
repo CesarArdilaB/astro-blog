@@ -77,3 +77,7 @@ With love, Cesar Ardila 🎵
 ### 7. Build and verify
 
 Run `npm run build` to verify the post compiles without errors.
+
+### 8. Translation
+
+After publishing an English post, offer to translate it to Spanish using the `/translate-post` skill. Spanish translations use the same SVG image and follow transcreation principles (not literal translation). See `.claude/commands/translate-post.md` for the full translation guidelines.
